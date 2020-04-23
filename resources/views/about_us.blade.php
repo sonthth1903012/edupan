@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title',"About_us")
+@section('title',"About")
 
 @section('content')
 
@@ -18,17 +18,28 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                        <span>The Best</span>
                         <h3>We are the Academy</h3>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris. Etiam tristique magna eget velit consectetur, a tincidunt velit dictum. Cras vulputate metus id felis ornare hendrerit. Maecenas sodales suscipit ipsum.</p>
+                    <p>You’re joining a global education. Millions of
+                        members from all over the world, each with their
+                        own unique story, working at their own pace on The
+                        Academy every single hour. Our resources are being
+                        gathered in more than 22 countries including Spanin,
+                        France, Brazil, USA, Vietnam and so on.</p>
                 </div>
                 <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="500ms">
-                    <p>Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris. Etiam tristique magna eget velit consectetur, a tincidunt velit dictum. Cras vulputate metus id felis ornare hendrerit. Maecenas sodales suscipit ipsum.</p>
+                    <p>Anyone can learn anything. For free.
+                        Education is a human right. We are a
+                        nonprofit because we believe in a free,
+                        world-class education for anyone, anywhere.
+                        Instead of ads or subscriptions, we are supported
+                        by individual contributions from people like you.
+                        Please join us today.</p>
+
                 </div>
             </div>
             <div class="row">
@@ -50,11 +61,27 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                        <span>The Best</span>
-                        <h3>Meet the Teachers</h3>
+                        <h3>From humble beginnings to a world-class team</h3>
                     </div>
                 </div>
             </div>
+
+            <div class="row section-padding-0-100">
+                <div class="row">
+                    <div class="col-12 col-md-12 wow fadeInUp" data-wow-delay="400ms" style="font-size: 15pt">
+                        <p>What started as one man tutoring his cousin has grown
+                            into a more than 150-person organization. We’re a diverse
+                            team that has come together to work on an audacious mission:
+                            to help and provide a free world-class education for anyone,
+                            anywhere. We are developers, teachers, designers, strategists,
+                            scientists, and content specialists who passionately believe
+                            in inspiring the world to learn.
+                            A few great people can make a big difference.</p>
+                    </div>
+
+                </div>
+            </div>
+
 
             <div class="row">
                 <!-- Single Teachers -->
@@ -118,7 +145,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="view-all text-center wow fadeInUp" data-wow-delay="800ms">
-                        <a href="#" class="btn academy-btn">All Teachers</a>
+                        <a href="#" class="btn academy-btn">All Founders</a>
                     </div>
                 </div>
             </div>

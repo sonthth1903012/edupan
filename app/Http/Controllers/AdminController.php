@@ -13,7 +13,7 @@ class AdminController extends Controller
 
     public function category(){
         $categories = Category::all();
-        return view('admin.index',['categories'=>$categories]);
+        return view('admin.category',['categories'=>$categories]);
     }
 
     public function categoryCreate(){

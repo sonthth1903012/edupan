@@ -29,9 +29,12 @@
                             <div class="col-12 col-lg-5">
                                 <div class="contact-information wow fadeInUp" data-wow-delay="400ms">
                                     <div class="section-heading text-left">
-                                        <span>The Best</span>
                                         <h3>Contact Us</h3>
-                                        <p class="mt-30">Lacinia, lacinia la cus non, fermen tum nisi. Donec et sollicitudin. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris.</p>
+                                        <p class="mt-30">Education is a human right. We are a
+                                            nonprofit because we believe in a free, world-class
+                                            education for anyone, anywhere. Instead of ads or
+                                            subscriptions, we are supported by individual contributions
+                                            from people like you. Please join us today.</p>
                                     </div>
 
                                     <!-- Contact Social Info -->

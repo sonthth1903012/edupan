@@ -23,7 +23,9 @@ class WebController extends Controller
         return view ("contact");
     }
 
-    public function course(){
-        return view ("course");
+    public function post(){
+        return view ("post");
     }
+
+
 }

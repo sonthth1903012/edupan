@@ -47,13 +47,13 @@
                                     <ul class="dropdown">
                                         <li><a href="{{url('/')}}">Home</a></li>
                                         <li><a href="{{url('/about_us')}}">About Us</a></li>
-                                        <li><a href="{{url('/course')}}">Course</a></li>
+                                        <li><a href="{{url('/post')}}">Post</a></li>
                                         <li><a href="{{url('/blog')}}">Blog</a></li>
                                         <li><a href="{{url('/contact')}}">Contact</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="{{url('/about_us')}}">About Us</a></li>
-                                <li><a href="{{url('/course')}}">Course</a></li>
+                                <li><a href="{{url('/post')}}">Post</a></li>
                                 <li><a href="{{url('/contact')}}">Contact</a></li>
                             </ul>
                         </div>

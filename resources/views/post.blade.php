@@ -6,7 +6,7 @@
     <!-- ##### Breadcumb Area Start ##### -->
     <div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
         <div class="bradcumbContent">
-            <h2>Our Courses</h2>
+            <h2>Our Post</h2>
         </div>
     </div>
     <!-- ##### Breadcumb Area End ##### -->
@@ -17,8 +17,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                        <span>The Best</span>
-                        <h3>Top Popular Courses</h3>
+                        <h3>Top Popular Post</h3>
                     </div>
                 </div>
             </div>
@@ -220,8 +219,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
-                        <h3>Do you want to enrole at our Academy? Get in touch!</h3>
-                        <a href="#" class="btn academy-btn">See More</a>
+                        <h3>Do you want to join our Academy? Contact us now!</h3>
+                        <a href="{{url('/contact')}}" class="btn academy-btn">Contact</a>
                     </div>
                 </div>
             </div>
