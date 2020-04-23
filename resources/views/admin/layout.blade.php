@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@includeIf("admin.head")
+@includeIf("admin.html.head")
 
 <body class="animsition">
 <div class="page-wrapper">
@@ -137,16 +137,16 @@
                             <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="index.html">Dashboard 1</a>
+                                <a href="{{url('admin/category')}}">Category</a>
                             </li>
                             <li>
-                                <a href="index2.html">Dashboard 2</a>
+                                <a href="{{url('/blog')}}">Dashboard 2</a>
                             </li>
                             <li>
-                                <a href="index3.html">Dashboard 3</a>
+                                <a href="{{url('/blog')}}">Dashboard 3</a>
                             </li>
                             <li>
-                                <a href="index4.html">Dashboard 4</a>
+                                <a href="{{url('/blog')}}">Dashboard 4</a>
                             </li>
                         </ul>
                     </li>
@@ -393,7 +393,7 @@
                                             </div>
                                         </div>
                                         <div class="account-dropdown__footer">
-                                            <a href="#">
+                                            <a href="{{url('/logout')}}">
                                                 <i class="zmdi zmdi-power"></i>Logout</a>
                                         </div>
                                     </div>
@@ -432,7 +432,7 @@
 
 </div>
 
-@includeIf("admin.script")
+@includeIf("admin.html.script")
 
 </body>
 

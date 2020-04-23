@@ -1,9 +1,12 @@
 @extends("admin.layout")
+
+@section('title',"Category")
+
 @section("top_content")
     <div class="col-md-12">
         <div class="overview-wrap">
             <h2 class="title-1">Category</h2>
-            <a class="au-btn au-btn-icon au-btn--blue" href="{{url('admin/category/create')}}">
+            <a class="au-btn au-btn-icon au-btn--blue" href="{{url('admin/category/create_category')}}">
                 <i class="zmdi zmdi-plus"></i>Add category</a>
         </div>
     </div>
@@ -29,7 +32,7 @@
                     <td>{{$c->updated_at}}</td>
                     <td>
                         <div class="table-data-feature">
-                            <a href="{{url("admin/category/edit",['id'=>$c->id])}}" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                            <a href="{{url("admin/category/edit_category",['id'=>$c->id])}}" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                 <i class="zmdi zmdi-edit"></i>
                             </a>
                             <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">

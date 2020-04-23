@@ -7,13 +7,17 @@ use App\Category;
 
 class AdminController extends Controller
 {
+    public function home(){
+        return view("admin.home");
+    }
+
     public function category(){
         $categories = Category::all();
-        return view('admin.category.index',['categories'=>$categories]);
+        return view('admin.index',['categories'=>$categories]);
     }
 
     public function categoryCreate(){
-        return view("admin.category.create");
+        return view("admin.create_category");
     }
 
     public function categoryStore(Request $request){
@@ -32,7 +36,7 @@ class AdminController extends Controller
 
     public function categoryEdit($id){
         $category = Category::find($id);
-        return view("admin.category.edit",['category'=>$category]);
+        return view("admin.edit_category",['category'=>$category]);
     }
 
     public function categoryUpdate($id,Request $request){

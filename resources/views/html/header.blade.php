@@ -11,7 +11,7 @@
                             <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
                         </div>
                         <div class="login-content">
-                            <a href="#">Register / Login</a>
+                            <a href="{{url('/login')}}">Register / Login</a>
                         </div>
                     </div>
                 </div>
