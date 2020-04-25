@@ -22,6 +22,7 @@ Route::get("/post","WebController@post");
 Route::get("/blog","WebController@blog");
 Route::get("/contact","WebController@contact");
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -31,5 +32,9 @@ Route::get('/logout', function() {
     Illuminate\Support\Facades\Auth::logout();
     return redirect()->to("/login");
 });
+
+
+Route::get("/donate","WebController@donate");
+Route::post('/sendemail', 'WebController@sendemail');
 
 
