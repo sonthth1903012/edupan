@@ -40,7 +40,7 @@ class WebController extends Controller
             'message'   =>   $request->message,
         );
 
-        Mail::to("sonthth1903012@fpt.edu.vn")->send(new SendEmail($data));
+        Mail::to("duyk30b@gmail.com")->send(new SendEmail($data));
 //        Mail::to(Auth::user()->email)->send(new SendEmail());
         return redirect()->to("/thanks");
     }
