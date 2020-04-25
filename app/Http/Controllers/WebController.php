@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\SendEmail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class WebController extends Controller
 {
@@ -32,9 +33,10 @@ class WebController extends Controller
         return view ("donate");
     }
 
-    function sendemail(Request $request)
+    function sendemail()
     {
-        Mail::to('sonthth1903012@fpt.edu.vn')->send(new SendEmail());
+        Mail::to("sonthth1903012@fpt.edu.vn")->send(new SendEmail());
+        return redirect()->to("/");
     }
 
 }

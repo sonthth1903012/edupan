@@ -35,6 +35,7 @@ Route::get('/logout', function() {
 
 
 Route::get("/donate","WebController@donate");
-Route::post('/sendemail', 'WebController@sendemail');
+Route::post("/sendemail", 'WebController@sendemail');
+Route::get("/thanks", 'WebController@sendemail');
 
 
