@@ -10,9 +10,15 @@
                         <div class="academy-logo">
                             <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
                         </div>
+                        @if(!Auth::check())
                         <div class="login-content">
-                            <a href="{{url('/login')}}">Register / Login</a>
+                            <a href="{{url('/login')}}">Login/Register</a>
                         </div>
+                        @else
+                        <div class="login-content">
+                            <a href="{{url('logout')}}">Logout</a>
+                        </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -54,7 +60,7 @@
                                 </li>
                                 <li><a href="{{url('/about_us')}}">About Us</a></li>
                                 <li><a href="{{url('/post')}}">Post</a></li>
-                                <li><a href="{{url('/donate')}}">Donate</a></li>
+                                <li><a href="{{url('/donate')}}">Contact</a></li>
                                 <li><a href="{{url('/contact')}}">Contact</a></li>
                             </ul>
                         </div>
