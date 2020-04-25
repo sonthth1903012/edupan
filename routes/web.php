@@ -21,6 +21,7 @@ Route::get("/about_us","WebController@about_us");
 Route::get("/post","WebController@post");
 Route::get("/blog","WebController@blog");
 Route::get("/contact","WebController@contact");
+Route::get("/thanks", 'WebController@thanks');
 
 
 Auth::routes();
@@ -36,6 +37,6 @@ Route::get('/logout', function() {
 
 Route::get("/donate","WebController@donate");
 Route::post("/sendemail", 'WebController@sendemail');
-Route::get("/thanks", 'WebController@sendemail');
+
 
 

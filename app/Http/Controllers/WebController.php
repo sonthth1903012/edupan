@@ -33,10 +33,20 @@ class WebController extends Controller
         return view ("donate");
     }
 
-    function sendemail()
+    function sendemail(Request $request)
     {
-        Mail::to("sonthth1903012@fpt.edu.vn")->send(new SendEmail());
-        return redirect()->to("/");
+        $data = array(
+            'name'      =>  $request->name,
+            'message'   =>   $request->message,
+        );
+
+        Mail::to("sonthth1903012@fpt.edu.vn")->send(new SendEmail($data));
+//        Mail::to(Auth::user()->email)->send(new SendEmail());
+        return redirect()->to("/thanks");
+    }
+
+    public function thanks(){
+        return view ("thanks");
     }
 
 }
