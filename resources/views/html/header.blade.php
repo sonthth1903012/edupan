@@ -60,7 +60,7 @@
                                 </li>
                                 <li><a href="{{url('/about_us')}}">About Us</a></li>
                                 <li><a href="{{url('/post')}}">Post</a></li>
-                                <li><a href="{{url('/donate')}}">Contact</a></li>
+                                <li><a href="{{url('/donate')}}">Donate</a></li>
                                 <li><a href="{{url('/contact')}}">Contact</a></li>
                             </ul>
                         </div>
