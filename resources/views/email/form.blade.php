@@ -27,11 +27,64 @@
         <tbody>
         <tr>
             <td class="esd-email-paddings" valign="top">
+                <table cellpadding="0" cellspacing="0" class="es-content esd-header-popover" align="center" style="padding-top:10px">
+                    <tbody>
+                    <tr>
+                        <td class="es-adaptive esd-stripe" style="background-color: #f7f7f7;" esd-custom-block-id="8428" bgcolor="#f7f7f7" align="center">
+                            <table class="es-content-body" style="background-color: transparent;" width="600" cellspacing="0" cellpadding="0" align="center">
+                                <tbody>
+                                <tr>
+                                    <td class="esd-structure es-p10" align="left">
+                                        <!--[if mso]><table width="580"><tr><td width="280" valign="top"><![endif]-->
+                                        <table class="es-left" cellspacing="0" cellpadding="0" align="left">
+                                            <tbody>
+                                            <tr>
+                                                <td class="esd-container-frame" width="280" align="left">
+                                                    <table width="100%" cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="es-infoblock esd-block-text es-m-txt-c" align="left">
+                                                                <p>Thank you!</p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--[if mso]></td><td width="20"></td><td width="280" valign="top"><![endif]-->
+                                        <table class="es-right" cellspacing="0" cellpadding="0" align="right">
+                                            <tbody>
+                                            <tr>
+                                                <td class="esd-container-frame" width="280" align="left">
+                                                    <table width="100%" cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="right" class="es-infoblock esd-block-text es-m-txt-c">
+                                                                <p><a href="edupan-project.herokuapp.com" class="view" target="_blank" style="float:right">Visit us!</a></p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--[if mso]></td></tr></table><![endif]-->
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
                 <table class="es-header" align="center" cellspacing="0" cellpadding="0">
                     <tbody>
                     <tr>
                         <td class="es-adaptive esd-stripe" esd-custom-block-id="8429" align="center">
-                            <table class="es-header-body" align="center" width="600" cellspacing="0" cellpadding="0">
+                            <table class="es-header-body" align="center" width="600" cellspacing="0" cellpadding="0" style="background-color:#ffffff;">
                                 <tbody>
                                 <tr>
                                     <td class="esd-structure es-p25t es-p10b es-p20r es-p20l" align="left">
@@ -53,7 +106,7 @@
                                             </tbody>
                                         </table>
                                         <!--[if mso]></td><td width="10"></td><td width="345" valign="top"><![endif]-->
-                                        <table align="right" cellspacing="0" cellpadding="0">
+                                        <table align="right" cellspacing="0" cellpadding="0" style="background-color:#ffffff;">
                                             <tbody>
                                             <tr>
                                                 <td class="esd-container-frame" align="left" width="345">
@@ -64,9 +117,9 @@
                                                                 <table class="es-menu" width="70%" cellspacing="0" cellpadding="0">
                                                                     <tbody>
                                                                     <tr class="links">
-                                                                        <td class="es-p10t es-p10b es-p5r es-p5l " style="padding-bottom: 0px; padding-top: 20px; " align="center" width="33.33%" bgcolor="transparent"><a target="_blank" style="color: #333333;" href="https://viewstripo.email/">Classes</a></td>
-                                                                        <td class="es-p10t es-p10b es-p5r es-p5l " style="padding-bottom: 0px; padding-top: 20px; " align="center" width="33.33%" bgcolor="transparent"><a target="_blank" style="color: #333333;" href="https://viewstripo.email/">Workshops</a></td>
-                                                                        <td class="es-p10t es-p10b es-p5r es-p5l " style="padding-bottom: 0px; padding-top: 20px; " align="center" width="33.33%" bgcolor="transparent"><a target="_blank" style="color: #333333;" href="https://viewstripo.email/">Blog</a></td>
+                                                                        <td class="es-p10t es-p10b es-p5r es-p5l " style="padding-bottom: 0px; padding-top: 20px; " align="center" width="33.33%" bgcolor="transparent"><a target="_blank" style="color: #333333;" href="edupan-project.herokuapp.com">Homepage</a></td>
+                                                                        <td class="es-p10t es-p10b es-p5r es-p5l " style="padding-bottom: 0px; padding-top: 20px; " align="center" width="33.33%" bgcolor="transparent"><a target="_blank" style="color: #333333;" href="edupan-project.herokuapp.com/post">Scholarship</a></td>
+                                                                        <td class="es-p10t es-p10b es-p5r es-p5l " style="padding-bottom: 0px; padding-top: 20px; " align="center" width="33.33%" bgcolor="transparent"><a target="_blank" style="color: #333333;" href="edupan-project.herokuapp.com/blog">Blog</a></td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -146,10 +199,6 @@
                                                                 <p>Best wishes for you!</p>
                                                             </td>
                                                         </tr>
-                                                        <br/>
-                                                        <tr>
-                                                            <td class="esd-block-button es-p20t es-p15b es-p10r es-p10l" align="center"><span class="es-button-border"><a href="edupan-project.herokuapp.com" class="es-button" target="_blank">Visit us!</a></span></td>
-                                                        </tr>
                                                         </tbody>
                                                     </table>
                                                 </td>
@@ -167,7 +216,7 @@
                 <table cellpadding="0" cellspacing="0" class="es-footer" align="center">
                     <tbody>
                     <tr>
-                        <td class="esd-stripe" esd-custom-block-id="8442" style="background-color: #f7f7f7;" bgcolor="#f7f7f7" align="center">
+                        <td class="esd-stripe" esd-custom-block-id="8442" style="background-color: #ffffff;" bgcolor="#f7f7f7" align="center">
                             <table class="es-footer-body" width="600" cellspacing="0" cellpadding="0" align="center">
                                 <tbody>
                                 <tr>
@@ -178,11 +227,6 @@
                                                 <td class="esd-container-frame" width="560" valign="top" align="center">
                                                     <table width="100%" cellspacing="0" cellpadding="0">
                                                         <tbody>
-                                                        <tr>
-                                                            <td class="esd-block-text es-p5b" align="center">
-                                                                <h3 style="line-height: 150%;">Let's get social</h3>
-                                                            </td>
-                                                        </tr>
                                                         <tr>
                                                             <td class="esd-block-social es-p10t es-p10b" align="center" style="font-size:0">
                                                                 <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
@@ -202,37 +246,6 @@
                                                             <td align="center" class="esd-block-text es-p10t es-p10b">
                                                                 <p style="line-height: 150%;">You are receiving this email because you have visited our site or asked us about the Academy. You can&nbsp;<a target="_blank" class="unsubscribe" style="line-height: 150%;" href="edupan-project.herokuapp.com">vist us here</a>&nbsp;or&nbsp;<a target="_blank" style="line-height: 150%;" href="edupan-project.herokuapp.com/blog">read our blog here</a>.</p>
                                                             </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <table class="esd-footer-popover es-content" align="center" cellspacing="0" cellpadding="0">
-                    <tbody>
-                    <tr>
-                        <td class="esd-stripe" align="center">
-                            <table class="es-content-body" style="background-color: transparent;" align="center" width="600" cellspacing="0" cellpadding="0">
-                                <tbody>
-                                <tr>
-                                    <td class="esd-structure es-p30t es-p30b es-p20r es-p20l" align="left">
-                                        <table width="100%" cellspacing="0" cellpadding="0">
-                                            <tbody>
-                                            <tr>
-                                                <td class="esd-container-frame" align="center" width="560" valign="top">
-                                                    <table width="100%" cellspacing="0" cellpadding="0">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td class="esd-block-image es-infoblock made_with" align="center" style="font-size:0"><a target="_blank" href="https://viewstripo.email/?utm_source=templates&utm_medium=email&utm_campaign=yoga&utm_content=trigger_newsletter"><img src="https://tlr.stripocdn.email/content/guids/CABINET_9df86e5b6c53dd0319931e2447ed854b/images/64951510234941531.png" alt width="125"></a></td>
                                                         </tr>
                                                         </tbody>
                                                     </table>
