@@ -19,7 +19,9 @@ Route::get('/', function () {
 Route::get("/","WebController@home");
 Route::get("/about_us","WebController@about_us");
 Route::get("/post","WebController@post");
+Route::get("/post_detail","WebController@post_detail");
 Route::get("/blog","WebController@blog");
+Route::get("/blog_detail","WebController@blog_detail");
 Route::get("/contact","WebController@contact");
 Route::get("/thanks", 'WebController@thanks');
 
@@ -29,8 +31,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+Illuminate\Support\Facades\Auth::logout();
 Route::get('/logout', function() {
-    Illuminate\Support\Facades\Auth::logout();
     return redirect()->to("/home");
 });
 

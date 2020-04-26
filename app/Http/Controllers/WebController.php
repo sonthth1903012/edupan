@@ -21,12 +21,20 @@ class WebController extends Controller
         return view ("blog");
     }
 
+    public function blog_detail(){
+        return view ("blog_detail");
+    }
+
     public function contact(){
         return view ("contact");
     }
 
     public function post(){
         return view ("post");
+    }
+
+    public function post_detail(){
+        return view ("post_detail");
     }
 
     public function donate(){
@@ -40,7 +48,7 @@ class WebController extends Controller
             'message'   =>   $request->message,
         );
 
-        Mail::to("duyk30b@gmail.com")->send(new SendEmail($data));
+        Mail::to("sonthth1903012@fpt.edu.vn")->send(new SendEmail($data));
 //        Mail::to(Auth::user()->email)->send(new SendEmail());
         return redirect()->to("/thanks");
     }

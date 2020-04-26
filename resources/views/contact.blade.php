@@ -76,9 +76,9 @@
                             <div class="col-12 col-lg-7">
                                 <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
                                     <form action="#" method="post">
-                                        <input type="text" class="form-control" id="name" placeholder="Name">
-                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                        <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
                                         <button class="btn academy-btn mt-30" type="submit">Contact Us</button>
                                     </form>
                                 </div>

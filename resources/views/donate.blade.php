@@ -51,9 +51,9 @@
                                 <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
                                     <form method="post" action="{{url('/sendemail')}}">
                                         @csrf
-                                        <input type="text" class="form-control" id="name" placeholder="Name">
-                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                        <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
                                         <button class="btn academy-btn mt-30" type="submit">Send</button>
                                     </form>
                                 </div>
