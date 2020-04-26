@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title',"Course")
+@section('title',"Post")
 
 @section('content')
     <!-- ##### Breadcumb Area Start ##### -->
@@ -219,8 +219,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
-                        <h3>Do you want to join our Academy? Contact us now!</h3>
-                        <a href="{{url('/contact')}}" class="btn academy-btn">Contact</a>
+                        <h3>Do you want to learn at our Academy? Join us now!</h3>
+                        <a href="{{url('/contact')}}" class="btn academy-btn">Join now!</a>
                     </div>
                 </div>
             </div>
