@@ -13,8 +13,8 @@
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
                             <div class="hero-slides-content">
-                                <h4 data-animation="fadeInUp" data-delay="100ms">All the courses you need</h4>
-                                <h2 data-animation="fadeInUp" data-delay="400ms">Wellcome to our <br>Online University</h2>
+                                <h4 data-animation="fadeInUp" data-delay="100ms">All the knowledges you need</h4>
+                                <h2 data-animation="fadeInUp" data-delay="400ms">Welcome to <br>The Academy</h2>
                                 <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read More</a>
                             </div>
                         </div>
@@ -28,8 +28,8 @@
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
                             <div class="hero-slides-content">
-                                <h4 data-animation="fadeInUp" data-delay="100ms">All the courses you need</h4>
-                                <h2 data-animation="fadeInUp" data-delay="400ms">Wellcome to our <br>Online University</h2>
+                                <h4 data-animation="fadeInUp" data-delay="100ms">Massive online library</h4>
+                                <h2 data-animation="fadeInUp" data-delay="400ms">Welcome to  <br>The Academy</h2>
                                 <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read More</a>
                             </div>
                         </div>
@@ -51,14 +51,14 @@
                             <div class="col-12 col-md-4">
                                 <div class="single-top-features d-flex align-items-center justify-content-center">
                                     <i class="icon-agenda-1"></i>
-                                    <h5>Online Courses</h5>
+                                    <h5>Online Docmuments</h5>
                                 </div>
                             </div>
                             <!-- Single Top Features -->
                             <div class="col-12 col-md-4">
                                 <div class="single-top-features d-flex align-items-center justify-content-center">
                                     <i class="icon-assistance"></i>
-                                    <h5>Amazing Teachers</h5>
+                                    <h5>Amazing Members</h5>
                                 </div>
                             </div>
                             <!-- Single Top Features -->
@@ -163,8 +163,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center mx-auto white wow fadeInUp" data-wow-delay="300ms">
-                        <span>our testimonials</span>
-                        <h3>See what our satisfied customers are saying about us</h3>
+                        <h3>See what our satisfied members are saying about us</h3>
                     </div>
                 </div>
             </div>
@@ -353,8 +352,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
-                        <h3>Do you want to enrole at our Academy? Get in touch!</h3>
-                        <a href="#" class="btn academy-btn">See More</a>
+                        <h3>Do you want to learn at our Academy? Join us now!</h3>
+                        <a href="#" class="btn academy-btn">Join now!</a>
                     </div>
                 </div>
             </div>

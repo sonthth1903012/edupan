@@ -9,7 +9,11 @@
                         <div class="widget-title">
                             <a href="#"><img src="img/core-img/logo2.png" alt=""></a>
                         </div>
-                        <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod erat. Ut at erat et arcu pulvinar cursus a eget.</p>
+                        <p>
+                            Education is a human right. We are a nonprofit because we
+                            believe in a free, world-class education for anyone, anywhere.
+                            Glad you with us!
+                        </p>
                         <div class="footer-social-info">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -27,10 +31,10 @@
                         </div>
                         <nav>
                             <ul class="useful-links">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Services &amp; Features</a></li>
-                                <li><a href="#">Accordions and tabs</a></li>
-                                <li><a href="#">Menu ideas</a></li>
+                                <li><a href="{{url('/post')}}">News</a></li>
+                                <li><a href="{{url('/blog')}}">Blog</a></li>
+                                <li><a href="{{url('/contact')}}">Contact Us</a></li>
+                                <li><a href="{{url('/donate')}}">Help Us</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -59,7 +63,7 @@
                         </div>
                         <div class="single-contact d-flex mb-30">
                             <i class="icon-placeholder"></i>
-                            <p>4127/ 5B-C Mislane Road, Gibraltar, UK</p>
+                            <p>8 Tôn Thất Thuyết, Mỹ Đình, Từ Liêm, Hà Nội </p>
                         </div>
                         <div class="single-contact d-flex mb-30">
                             <i class="icon-telephone-1"></i>

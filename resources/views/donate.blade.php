@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title',"Contact")
+@section('title',"Donate")
 
 @section('content')
     <!-- ##### Breadcumb Area Start ##### -->
