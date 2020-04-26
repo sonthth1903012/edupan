@@ -136,13 +136,13 @@
                         </a>
                     </div>
                     <div class="oyw-layouts col-sm-4">
-                        <a href="#">
+                        <a href="{{url("/scholarships_detail")}}">
                             <img src="{{asset("img/scholarships/du-học.jpg")}}" alt="">
                             <p style="font-size: 16px; padding-top: 15px;">Deloitte- One Young World Scholarship 2020</p>
                         </a>
                     </div>
                     <div class="oyw-layouts col-sm-4">
-                        <a href="#">
+                        <a href="{{url("/scholarships_detail")}}">
                             <img src="{{asset("img/scholarships/CHD_Korea_University2.jpg")}}" alt="">
                             <p style="font-size: 16px; padding-top: 15px;">Deloitte- One Young World Scholarship 2020</p>
                         </a>

@@ -3,22 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eb52bf95-a635-4006-a278-a9dd75e0de6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <list default="true" id="eb52bf95-a635-4006-a278-a9dd75e0de6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/form_scholarships.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/form_scholarships.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/scholarships.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/scholarships_detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WebController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WebController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about_us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about_us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/html/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/html/head.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/html/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/html/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/scholarships.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scholarships.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
