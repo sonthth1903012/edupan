@@ -31,8 +31,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Illuminate\Support\Facades\Auth::logout();
 Route::get('/logout', function() {
+    Illuminate\Support\Facades\Auth::logout();
     return redirect()->to("/home");
 });
 
