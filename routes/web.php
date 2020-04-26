@@ -20,6 +20,11 @@ Route::get("/","WebController@home");
 Route::get("/about_us","WebController@about_us");
 Route::get("/post","WebController@post");
 Route::get("/post_detail","WebController@post_detail");
+Route::get("/scholarships","WebController@scholarships");
+Route::get("/scholarships_detail","WebController@scholarships_detail");
+Route::get("/form_scholarships","WebController@form_scholarships");
+Route::get("/workshop","WebController@workshop");
+Route::get("/course","WebController@course");
 Route::get("/blog","WebController@blog");
 Route::get("/blog_detail","WebController@blog_detail");
 Route::get("/contact","WebController@contact");
@@ -39,6 +44,7 @@ Route::get('/logout', function() {
 
 Route::get("/donate","WebController@donate");
 Route::post("/sendemail", 'WebController@sendemail');
+
 
 
 

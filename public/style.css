@@ -1238,3 +1238,79 @@ img {
     font-size: 18px; }
 
 /*# sourceMappingURL=style.css.map */
+
+/*  scholarships */
+/*.content .quote-image{*/
+/*    justify-content: center;*/
+/*}*/
+.content .quote-image .blockquote{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    max-width: 1100px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    /*font-weight: 800;*/
+    font-family: chalet-london-sixty,sans-serif;
+    align-self: center;
+    border-top: solid 3px;
+    border-bottom: solid 3px;
+    border-left: solid 3px;
+    border-right: solid 3px;
+    border-color: #ffffff96;
+}
+.content .quote-image .blockquote:before{
+    font-size: 10em;
+    top: 35px;
+    left: -50px;
+    position: absolute;
+    content: "“";
+    color: #00C0F3;
+}
+.lead{
+    font-size: 26.25px;
+    margin-bottom: 25px;
+}
+.oyw-layouts{
+    margin: 60px 0;
+}
+.oyw-layouts-header{
+    padding-top: 50px;
+}
+h1:after{
+    content: " ";
+    display: block;
+    width: 8%;
+    height: 5px;
+    margin: 7px auto;
+    background-color: #69bc5f;;
+}
+.oyw-layouts-content{
+    font-size: 20px;
+    font-weight: 100;
+}
+.block-title{
+    color: #69bc5f;
+    margin-bottom: 20px;
+}
+.oyw-layouts-content {
+    list-style-type: disc;
+}
+.editor-button-blue{
+
+    padding: 15px;
+    max-width: 300px;
+    margin-top: 2.5em;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    align-self: center;
+    border-top: solid 3px;
+    border-bottom: solid 3px;
+    border-left: solid 3px;
+    border-right: solid 3px;
+    border-color:  #69bc5f;
+}

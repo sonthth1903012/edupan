@@ -4,6 +4,22 @@
     <list default="true" id="eb52bf95-a635-4006-a278-a9dd75e0de6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+    <list default="true" id="eb52bf95-a635-4006-a278-a9dd75e0de6c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/form_scholarships.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/form_scholarships.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/scholarships.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/scholarships_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WebController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WebController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/about_us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about_us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/html/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/html/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/html/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/html/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +31,17 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -114,7 +139,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../T1904A_Laravel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Laravel" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -157,6 +189,13 @@
       <workItem from="1587626739936" duration="19195000" />
       <workItem from="1587655870304" duration="3272000" />
       <workItem from="1587808298349" duration="403000" />
+      <workItem from="1587566429557" duration="2167000" />
+      <workItem from="1587624115623" duration="4706000" />
+      <workItem from="1587699694473" duration="16597000" />
+      <workItem from="1587805995153" duration="12987000" />
+      <workItem from="1587826417365" duration="9866000" />
+      <workItem from="1587870670243" duration="3594000" />
+      <workItem from="1587892394733" duration="9939000" />
     </task>
     <servers />
   </component>
@@ -167,6 +206,8 @@
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1587808871732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587560939498" />
+    <state x="521" y="134" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587899607020" />
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587808871732" />
     <state x="508" y="177" key="NewPhpClassDialog" timestamp="1587560408038">
       <screen x="0" y="0" width="1366" height="728" />
@@ -176,6 +217,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1587560419091" />
+    <state x="235" y="0" key="SettingsEditor" timestamp="1587566681810">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="235" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587566681810" />
+    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587911245147">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1587911245147" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1587838600649">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587838600649" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587817269960">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587817269960" />
     <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1587808298838">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

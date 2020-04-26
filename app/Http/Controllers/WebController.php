@@ -13,6 +13,19 @@ class WebController extends Controller
         return view ("home");
     }
 
+    public function scholarships(){
+        return view ("scholarships");
+    }
+    public function scholarships_detail(){
+        return view ("scholarships_detail");
+    }
+    public function workshop(){
+        return view ("workshop");
+    }
+    public function form_scholarships(){
+        return view("form_scholarships");
+    }
+
     public function about_us(){
         return view ("about_us");
     }
