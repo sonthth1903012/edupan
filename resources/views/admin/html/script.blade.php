@@ -1,23 +1,26 @@
-<!-- Jquery JS-->
-<script src="vendor/jquery-3.2.1.min.js"></script>
-<!-- Bootstrap JS-->
-<script src="vendor/bootstrap-4.1/popper.min.js"></script>
-<script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
-<!-- Vendor JS       -->
-<script src="vendor/slick/slick.min.js">
-</script>
-<script src="vendor/wow/wow.min.js"></script>
-<script src="vendor/animsition/animsition.min.js"></script>
-<script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-</script>
-<script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-<script src="vendor/counter-up/jquery.counterup.min.js">
-</script>
-<script src="vendor/circle-progress/circle-progress.min.js"></script>
-<script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-<script src="vendor/chartjs/Chart.bundle.min.js"></script>
-<script src="vendor/select2/select2.min.js">
-</script>
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="{{asset("admin/assets/libs/jquery/dist/jquery.min.js")}}"></script>
+<script src=></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="{{asset("admin/assets/libs/popper.js/dist/umd/popper.min.js")}}"></script>
+<script src="{{asset("admin/assets/libs/bootstrap/dist/js/bootstrap.min.js")}}"></script>
+<script src="{{asset("admin/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js")}}"></script>
+<script src="{{asset("admin/assets/extra-libs/sparkline/sparkline.js")}}"></script>
 
-<!-- Main JS-->
-<script src="js/main.js"></script>
+<script src="{{asset("admin/dist/js/waves.js")}}"></script>
+<script src="{{asset("admin/dist/js/sidebarmenu.js")}}"></script>
+<script src="{{asset("admin/dist/js/custom.min.js")}}"></script>
+<!--Wave Effects -->
+
+<!--This page JavaScript -->
+<!-- <script src="dist/js/pages/dashboards/dashboard1.js"></script> -->
+<!-- Charts js Files -->
+<script src="{{asset("admin/assets/libs/flot/excanvas.js")}}"></script>
+<script src="{{asset("admin/assets/libs/flot/jquery.flot.js")}}"></script>
+<script src="{{asset("admin/assets/libs/flot/jquery.flot.pie.js")}}"></script>
+<script src="{{asset("admin/assets/libs/flot/jquery.flot.time.js")}}"></script>
+<script src="{{asset("admin/assets/libs/flot/jquery.flot.stack.js")}}"></script>
+<script src="{{asset("admin/assets/libs/flot/jquery.flot.crosshair.js")}}"></script>
+<script src="{{asset("admin/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js")}}"></script>
+<script src="{{asset("admin/dist/js/pages/chart/chart-page-init.js")}}"></script>
