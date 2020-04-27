@@ -1280,14 +1280,14 @@ img {
 .oyw-layouts-header{
     padding-top: 50px;
 }
-h1:after{
-    content: " ";
-    display: block;
-    width: 8%;
-    height: 5px;
-    margin: 7px auto;
-    background-color: #69bc5f;;
-}
+/*h1:after{*/
+/*    content: " ";*/
+/*    display: block;*/
+/*    width: 8%;*/
+/*    height: 5px;*/
+/*    margin: 7px auto;*/
+/*    background-color: #69bc5f;;*/
+/*}*/
 .oyw-layouts-content{
     font-size: 20px;
     font-weight: 100;
@@ -1300,7 +1300,6 @@ h1:after{
     list-style-type: disc;
 }
 .editor-button-blue{
-
     padding: 15px;
     max-width: 300px;
     margin-top: 2.5em;

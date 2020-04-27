@@ -15,7 +15,6 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="{{asset("style.css")}}">
-    <link rel="stylesheet" href="{{asset("css/form_scholarships.css")}}">
 
 
 
