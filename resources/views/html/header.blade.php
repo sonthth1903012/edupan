@@ -53,7 +53,7 @@
                                     <ul class="dropdown">
                                         <li><a href="{{url('/blog')}}">Blog</a></li>
                                         <li><a href="{{url('/post')}}">Post</a></li>
-                                        <li><a class="dropdown-item" href="{{url('/blog_detail')}}">WORKSHOP</a></li>
+                                        <li><a class="dropdown-item" href="{{url('/post_detail')}}">WORKSHOP</a></li>
                                         <li><a class="dropdown-item" href="{{url('/scholarships')}}">SCHOLARSHIPS</a></li>
                                     </ul>
                                 </li>

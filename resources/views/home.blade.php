@@ -14,7 +14,7 @@
                         <div class="col-12">
                             <div class="hero-slides-content">
                                 <h4 data-animation="fadeInUp" data-delay="100ms">All the knowledges you need</h4>
-                                <h2 data-animation="fadeInUp" data-delay="400ms">Welcome to <br>The Academy</h2>
+                                <h2 data-animation="fadeInUp" data-delay="400ms">Welcome to <br>The Edupan</h2>
                                 <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read More</a>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                         <div class="col-12">
                             <div class="hero-slides-content">
                                 <h4 data-animation="fadeInUp" data-delay="100ms">Massive online library</h4>
-                                <h2 data-animation="fadeInUp" data-delay="400ms">Welcome to  <br>The Academy</h2>
+                                <h2 data-animation="fadeInUp" data-delay="400ms">Welcome to  <br>The Edupan</h2>
                                 <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read More</a>
                             </div>
                         </div>
@@ -352,7 +352,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
-                        <h3>Do you want to learn at our Academy? Join us now!</h3>
+                        <h3>Do you want to learn at our Edupan? Join us now!</h3>
                         <a href="#" class="btn academy-btn">Join now!</a>
                     </div>
                 </div>

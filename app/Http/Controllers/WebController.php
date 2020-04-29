@@ -2,28 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Mail\SendEmail;
+use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class WebController extends Controller
 {
-    //
     public function home(){
         return view ("home");
-    }
-
-    public function scholarships(){
-        return view ("scholarships");
-    }
-    public function scholarships_detail(){
-        return view ("scholarships_detail");
-    }
-    public function workshop(){
-        return view ("workshop");
-    }
-    public function form_scholarships(){
-        return view("form_scholarships");
     }
 
     public function about_us(){
@@ -31,19 +19,27 @@ class WebController extends Controller
     }
 
     public function blog(){
-        return view ("blog");
+        $news = Post::orderBy('created_at','desc')->take(10)->get();
+        $category = Category::orderBy('created_at','desc')->take(4)->get();
+        $link = Post::orderBy('created_at','desc')->take(4)->get();
+        return view ("blog",['news' => $news, 'category'=>$category,'link'=>$link]);
     }
 
-    public function blog_detail(){
-        return view ("blog_detail");
+    public function blog_detail($id){
+        $post = Post::find($id);
+        $category = Category::orderBy('created_at','desc')->take(4)->get();
+        $link = Post::orderBy('created_at','desc')->take(4)->get();
+        return view ("blog_detail",['post' => $post, 'category'=>$category,'link'=>$link]);
     }
+
 
     public function contact(){
         return view ("contact");
     }
 
     public function post(){
-        return view ("post");
+        $news = Post::orderBy('created_at','desc')->take(10)->get();
+        return view ("post",['news'=>$news]);
     }
 
     public function post_detail(){
@@ -68,6 +64,20 @@ class WebController extends Controller
 
     public function thanks(){
         return view ("thanks");
+    }
+//
+
+    public function scholarships(){
+        return view ("scholarships");
+    }
+    public function scholarships_detail(){
+        return view ("scholarships_detail");
+    }
+    public function workshop(){
+        return view ("workshop");
+    }
+    public function form_scholarships(){
+        return view("form_scholarships");
     }
 
 }

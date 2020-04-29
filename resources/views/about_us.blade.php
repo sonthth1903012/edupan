@@ -56,7 +56,7 @@
     <!-- ##### About Us Area End ##### -->
 
     <!-- ##### Team Area Start ##### -->
-    <section class="teachers-area section-padding-0-100">
+    <section class="teachers-area" style="padding-bottom: 50px">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -141,16 +141,23 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- ##### Features Area Start ##### -->
 
+    <!-- ##### CTA Area Start ##### -->
+    <div class="call-to-action-area">
+        <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="view-all text-center wow fadeInUp" data-wow-delay="800ms">
-                        <a href="#" class="btn academy-btn">All Founders</a>
+                    <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
+                        <h3>Do you want to learn at our Edupan? Join us now!</h3>
+                        <a href="#" class="btn academy-btn">Join now!</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ##### Features Area Start ##### -->
+    </div>
+    <!-- ##### CTA Area End ##### -->
 
 @endsection
