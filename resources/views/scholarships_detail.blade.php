@@ -16,7 +16,7 @@
                     <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                         <h4 style="color: #83c331;margin-top: 70px; ">Impacting 50 million lives by 2030 </h4>
                         <h4 style="margin-bottom: 90px;"> What impact wil you make?</h4>
-                        <h5>Deloitte One Young World Scholarships </h5>
+{{--                        <h5>Deloitte One Young World Scholarships </h5>--}}
                     </div>
                     <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="500ms">
                         <img src="{{asset("img/scholarships/2.2.-web-fb-960.jpg")}}" alt="">
