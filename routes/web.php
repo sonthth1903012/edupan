@@ -27,6 +27,7 @@ Route::get("/contact","WebController@contact");
 Route::get("/thanks", 'WebController@thanks');
 Route::get("/donate","WebController@donate");
 Route::post("/sendemail", 'WebController@sendemail');
+Route::post("/sendscholarship", 'WebController@sendscholarship')->middleware("auth");
 //
 
 Route::get("/scholarships","WebController@scholarships");

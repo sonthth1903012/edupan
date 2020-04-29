@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Mail\SendEmail;
+use App\Mail\SendTicket;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class WebController extends Controller
@@ -61,6 +63,19 @@ class WebController extends Controller
 //        Mail::to(Auth::user()->email)->send(new SendEmail());
         return redirect()->to("/thanks");
     }
+
+    function sendscholarship(Request $request)
+    {
+        $data = array(
+            'name'      =>  $request->name,
+            'message'   =>   $request->message,
+            'email'   =>   $request->email,
+        );
+
+        Mail::to(Auth::user()->email)->send(new SendTicket($data));
+        return redirect()->to("/thanks");
+    }
+
 
     public function thanks(){
         return view ("thanks");

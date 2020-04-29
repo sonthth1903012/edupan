@@ -75,7 +75,8 @@
                             <!-- Contact Form Area -->
                             <div class="col-12 col-lg-7">
                                 <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
-                                    <form action="#" method="post">
+                                    <form method="post" action="{{url('/sendscholarship')}}">
+                                        @csrf
                                         <input type="text" class="form-control" id="name" placeholder="Name" required>
                                         <input type="email" class="form-control" id="email" placeholder="E-mail" required>
                                         <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
