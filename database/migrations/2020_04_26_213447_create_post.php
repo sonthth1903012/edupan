@@ -15,11 +15,11 @@ class CreatePost extends Migration
     {
         Schema::create('post', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text("title");
-            $table->string("author");
-            $table->longText("content");
-            $table->text("shortDesc");
-            $table->string("thumbnail");
+            $table->text("title")->nullable();
+            $table->string("author")->nullable();
+            $table->longText("content")->nullable();
+            $table->text("shortDesc")->nullable();
+            $table->string("thumbnail")->nullable();
 
             @$table->unsignedBigInteger("category_id");
             @$table->unsignedBigInteger("user_id");

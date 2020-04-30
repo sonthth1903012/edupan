@@ -13,8 +13,6 @@ class AdminController extends Controller
     public function home(){
         return view("admin.home");
     }
-
-
     public function user(){
         $users = User::all();
         return view('admin.user.list_user',['users'=>$users]);
@@ -44,10 +42,14 @@ class AdminController extends Controller
     }
 
     public function postCreate(){
-        return view("admin.post.create_post");
+        $users = User::all();
+        $categories = Category::all();
+        return view("admin.post.create_post",['categories'=>$categories,'users'=>$users]);
     }
 
     public function commentCreate(){
+        $users = User::all();
+        $posts = Post::all();
         return view("admin.comment.create_comment");
     }
 
@@ -65,9 +67,41 @@ class AdminController extends Controller
         return redirect()->to("admin/category");
     }
 
+    public function postStore(Request $request){
+        $request->validate([
+            "post_title"=> "required|string",
+            "post_content"=> "required|string",
+        ]);
+        try {
+            Post::create([
+                "title"=> $request->get("post_title"),
+                "category_id"=> $request->get("post_category"),
+                "user_id"=> $request->get("post_user"),
+                "content"=> $request->get("post_content"),
+                "shortDesc"=> $request->get("post_desc"),
+                "author"=> $request->get("post_author"),
+                "thumbnail"=> $request->get("post_thumbnail")
+            ]);
+        }catch (\Exception $e){
+            dd($e);
+//            return redirect()->back();
+        }
+        return redirect()->to("admin/post");
+    }
+
     public function categoryEdit($id){
         $category = Category::find($id);
         return view("admin.category.edit_category",['category'=>$category]);
+    }
+
+    public function postEdit($id){
+        $post = Post::find($id);
+        return view("admin.post.edit_post",['post'=>$post]);
+    }
+
+    public function commentEdit($id){
+        $comment = Post::find($id);
+        return view("admin.comment.edit_comment",['comment'=>$comment]);
     }
 
     public function categoryUpdate($id,Request $request){
@@ -95,6 +129,32 @@ class AdminController extends Controller
         }
 
         return redirect()->to("admin/category");
+    }
+
+    public function postDelete($id){
+        $post = Post::find($id);
+        try {
+            $post->delete();
+        }
+        catch (\Exception $e){
+            dd($e);
+            return redirect()->back();
+        }
+
+        return redirect()->to("admin/post");
+    }
+
+    public function commentDelete($id){
+        $comment = Comment::find($id);
+        try {
+            $comment->delete();
+        }
+        catch (\Exception $e){
+            dd($e);
+            return redirect()->back();
+        }
+
+        return redirect()->to("admin/comment");
     }
 
 }
