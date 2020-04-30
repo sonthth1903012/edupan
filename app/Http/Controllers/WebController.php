@@ -21,7 +21,7 @@ class WebController extends Controller
     }
 
     public function blog(){
-        $news = Post::orderBy('created_at','desc')->take(10)->get();
+        $news = Post::orderBy('created_at','desc')->paginate(5);
         $category = Category::orderBy('created_at','desc')->take(4)->get();
         $link = Post::orderBy('created_at','desc')->take(4)->get();
         return view ("blog",['news' => $news, 'category'=>$category,'link'=>$link]);
@@ -32,6 +32,10 @@ class WebController extends Controller
         $category = Category::orderBy('created_at','desc')->take(4)->get();
         $link = Post::orderBy('created_at','desc')->take(4)->get();
         return view ("blog_detail",['post' => $post, 'category'=>$category,'link'=>$link]);
+    }
+
+    public function search(){
+
     }
 
 

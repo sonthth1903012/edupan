@@ -18,16 +18,20 @@ Route::get('/', function () {
 });
 Route::get("/","WebController@home");
 Route::get("/about_us","WebController@about_us");
+Route::get("/contact","WebController@contact");
+Route::get("/donate","WebController@donate");
+Route::get("/thanks", 'WebController@thanks');
+//
 Route::get("/post","WebController@post");
 Route::get("/post_detail","WebController@post_detail");
-Route::get("/course","WebController@course");
+//
 Route::get("/blog","WebController@blog");
 Route::get("/blog_detail/{id}","WebController@blog_detail");
-Route::get("/contact","WebController@contact");
-Route::get("/thanks", 'WebController@thanks');
-Route::get("/donate","WebController@donate");
+//
 Route::post("/sendemail", 'WebController@sendemail');
 Route::post("/sendscholarship", 'WebController@sendscholarship')->middleware("auth");
+//
+Route::get("/search","WebController@search");
 //
 
 Route::get("/scholarships","WebController@scholarships");
