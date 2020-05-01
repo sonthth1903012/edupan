@@ -24,8 +24,10 @@ class AdminController extends Controller
     }
 
     public function post(){
+        $users = User::all();
+        $categories = Category::all();
         $posts = Post::all();
-        return view('admin.post.list_post',['posts'=>$posts]);
+        return view('admin.post.list_post',['categories'=>$categories,'users'=>$users,'posts'=>$posts]);
     }
 
     public function comment(){
@@ -77,7 +79,7 @@ class AdminController extends Controller
                 "title"=> $request->get("post_title"),
                 "category_id"=> $request->get("post_category"),
                 "user_id"=> $request->get("post_user"),
-                "content"=> $request->get("post_content"),
+                "content"=> $_POST['post_content'],
                 "shortDesc"=> $request->get("post_desc"),
                 "author"=> $request->get("post_author"),
                 "thumbnail"=> $request->get("post_thumbnail")
@@ -95,8 +97,10 @@ class AdminController extends Controller
     }
 
     public function postEdit($id){
+        $users = User::all();
+        $categories = Category::all();
         $post = Post::find($id);
-        return view("admin.post.edit_post",['post'=>$post]);
+        return view("admin.post.edit_post",['categories'=>$categories,'users'=>$users,'post'=>$post]);
     }
 
     public function commentEdit($id){
@@ -119,6 +123,29 @@ class AdminController extends Controller
         return redirect()->to("admin/category");
     }
 
+    public function postUpdate($id,Request $request){
+        $post = Post::find($id);
+        $request->validate([
+            "post_title"=> "required|string",
+            "post_content"=> "required|string",
+        ]);
+        try {
+            $post->update([
+                "title"=> $request->get("post_title"),
+                "category_id"=> $request->get("post_category"),
+                "user_id"=> $request->get("post_user"),
+                "content"=> $_POST['post_content'],
+                "shortDesc"=> $request->get("post_desc"),
+                "author"=> $request->get("post_author"),
+                "thumbnail"=> $request->get("post_thumbnail")
+            ]);
+        }catch (\Exception $e){
+            dd($e);
+//            return redirect()->back();
+        }
+        return redirect()->to("admin/post");
+    }
+
     public function categoryDelete($id){
         $category = Category::find($id);
         try {
@@ -133,7 +160,11 @@ class AdminController extends Controller
 
     public function postDelete($id){
         $post = Post::find($id);
+        $comment = Comment::all()->where('post_id',$post->id);
         try {
+            $comment ->each(function ($c) {
+                $c->delete();
+            });
             $post->delete();
         }
         catch (\Exception $e){

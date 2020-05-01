@@ -25,20 +25,20 @@
                                     <div class="form-group row">
                                         <label class="col-sm-2">Title</label>
                                         <div class="col-sm-10">
-                                            <input name="post_title" placeholder="post title Here" id="post-title" value="{{old("post_title")}}" class="form-control" type="text">
+                                            <input name="post_title" placeholder="This is title" id="post-title" value="{{old("post_title")}}" class="form-control" type="text">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label class="col-sm-2">Content</label>
                                         <div class="col-sm-10">
-                                            <textarea name="post_content" placeholder="post content Here" id="post_content"></textarea>
+                                            <textarea name="post_content" placeholder="Write content Here" id="post_content"></textarea>
 
                                             <script src="//cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.1/tinymce.min.js"></script>
                                             <script type="text/javascript">
                                                 tinymce.init({
                                                     selector: '#post_content',
-                                                    height: 300,
+                                                    height: 400,
                                                     theme: 'modern',
                                                     plugins: [
                                                         'advlist autolink lists link image charmap print preview hr anchor pagebreak',
@@ -51,13 +51,6 @@
                                                     image_advtab: true
                                                 });
                                             </script>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-2">Short Description</label>
-                                        <div class="col-sm-10">
-                                            <textarea name="post_desc" placeholder="post Short Description Here" id="post-desc" class="form-control" type="text"></textarea>
                                         </div>
                                     </div>
 
@@ -96,14 +89,28 @@
                                     <div class="form-group row">
                                         <label class="col-3">Author</label>
                                         <div class="col-9">
-                                            <input name="post_author" placeholder="post author Here" id="post-author" value="{{old("post_author")}}" class="form-control" type="text">
+                                            <input name="post_author" placeholder="This is author" id="post_author" value="{{old("post_author")}}" class="form-control" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-3">Short Description</label>
+                                        <div class="col-9">
+                                            <textarea name="post_desc" placeholder="This is short Description" id="post_desc" class="form-control" type="text" style="height: 150px"></textarea>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label class="col-3">Thumbnail</label>
                                         <div class="col-9">
-                                            <input name="post_thumbnail" placeholder="post thumbnail Here" id="post-thumbnail" value="{{old("post_thumbnail")}}" class="form-control" type="text">
+                                            <input name="post_thumbnail" placeholder="This is link thumbnail" id="post_thumbnail" value="{{old("post_thumbnail")}}" class="form-control" type="text">
+                                            <img id="thumbnail_review" width="100%">
+                                            <script type="text/javascript">
+                                                document.getElementById("post_thumbnail").onblur = ()=>{
+                                                    let imgSRC = document.getElementById("post_thumbnail").value;
+                                                    document.getElementById("thumbnail_review").setAttribute("src", imgSRC);
+                                                }
+                                            </script>
                                         </div>
                                     </div>
                                 </div>
