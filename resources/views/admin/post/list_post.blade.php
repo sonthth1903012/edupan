@@ -34,13 +34,13 @@
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>User</th>
-                                        <th>Category</th>
                                         <th>Title</th>
-                                        <th>Author</th>
                                         <th>Content</th>
+                                        <th>Category</th>
+                                        <th>User</th>
+                                        <th>Author</th>
                                         <th>shortDesc</th>
-                                        <th>thumbnail</th>
+                                        <th>Thumbnail</th>
                                         <th>Controller</th>
                                     </tr>
                                     </thead>
@@ -49,14 +49,14 @@
                                     @foreach($posts as $p)
                                         <tr>
                                             <td>{{$p->id}}</td>
-                                            <td>{{$p->User->id}} - {{$p->User->name}}</td>
-                                            <td>{{$p->Category->id}} - {{$p->Category->category_name}}</td>
                                             <td>{{$p->title}}</td>
-                                            <td>{{$p->author}}</td>
                                             <td>{{$p->content}}</td>
+                                            <td>{{$p->Category->category_name}}</td>
+                                            <td>{{$p->User->name}}</td>
+                                            <td>{{$p->author}}</td>
                                             <td>{{$p->shortDesc}}</td>
                                             <td>
-                                                <img src="{{$p->thumbnail}}" height="100" width="100">
+                                                <img src="{{$p->thumbnail}}" width="100">
                                             </td>
                                             <td>
                                                 <a href="{{url("admin/post/edit_post",['id'=>$p->id])}}">Edit</a>

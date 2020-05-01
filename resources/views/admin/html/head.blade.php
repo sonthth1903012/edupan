@@ -12,6 +12,7 @@
 
     <link href="{{asset("admin/assets/libs/flot/css/float-chart.css")}}" rel="stylesheet">
     <link href="{{asset("admin/dist/css/style.min.css")}}" rel="stylesheet">
+    <link href="{{asset("admin/assets/libs/quill/dist/quill.snow.css")}}" rel="stylesheet">
     <!-- Custom CSS -->
 </head>
 

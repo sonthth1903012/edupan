@@ -24,3 +24,9 @@
 <script src="{{asset("admin/assets/libs/flot/jquery.flot.crosshair.js")}}"></script>
 <script src="{{asset("admin/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js")}}"></script>
 <script src="{{asset("admin/dist/js/pages/chart/chart-page-init.js")}}"></script>
+<script src="{{asset("admin/assets/libs/quill/dist/quill.min.js")}}"></script>
+<script type="text/javascript">
+    var quill = new Quill('#editor', {
+        theme: 'snow'
+    });
+</script>
