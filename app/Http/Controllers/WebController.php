@@ -15,19 +15,8 @@ use Illuminate\Support\Facades\Mail;
 class WebController extends Controller
 {
     public function home(){
-        if(!Cache::has("home") ) {
-            $cache['news'] = Post::orderBy('created_at', 'desc')->paginate(4);
-
-            $news = $cache['news'];
-
-            $view= view("home",['news'=>$news])->render();
-
-            $now=Carbon::now();
-            $expireDate=$now->addMinutes(120);
-
-            Cache::put("home",$view,$expireDate);
-        }
-        return Cache::get("home");
+        $news = Post::orderBy('created_at', 'desc')->paginate(4);
+        return view("home",['news'=>$news]);
     }
 
     public function about_us(){
