@@ -7,7 +7,7 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="footer-widget mb-100">
                         <div class="widget-title">
-                            <a href="#"><img src="img/core-img/logo2.png" alt=""></a>
+                            <a href="#"><img src="img/core-img/logo5.png" alt=""></a>
                         </div>
                         <p>
                             Education is a human right. We are a nonprofit because we
