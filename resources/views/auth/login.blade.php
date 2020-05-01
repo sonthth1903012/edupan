@@ -1,13 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
+<div class="contact-area" style="padding: 150px 0 100px 0">
+    <div class="container">
+        <div class="col-12" style="padding-top:200px">
+            <div class="contact-content">
+                <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -53,7 +51,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     {{ __('Login') }}
                                 </button>
 
