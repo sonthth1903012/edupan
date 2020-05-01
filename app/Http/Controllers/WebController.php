@@ -34,8 +34,13 @@ class WebController extends Controller
         return view ("blog_detail",['post' => $post, 'category'=>$category,'link'=>$link]);
     }
 
-    public function search(){
-
+    public function search(Request $request){
+        $search = $request -> search;
+        $result = Post::where('title','like',"%$search%")->orWhere('shortDesc','like',"%$search%")
+            ->orWhere('content','like',"%$search%")->take(20)->paginate(5);
+        $category = Category::orderBy('created_at','desc')->take(4)->get();
+        $link = Post::orderBy('created_at','desc')->take(4)->get();
+        return view("search",['$search' => $search,'category'=>$category,'link'=>$link, 'result' => $result]);
     }
 
 
@@ -44,8 +49,6 @@ class WebController extends Controller
     }
 
     public function post(){
-        $news = Post::orderBy('created_at','desc')->take(10)->get();
-        return view ("post",['news'=>$news]);
     }
 
     public function post_detail(){

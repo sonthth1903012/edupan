@@ -25,13 +25,15 @@ Route::get("/thanks", 'WebController@thanks');
 Route::get("/post","WebController@post");
 Route::get("/post_detail","WebController@post_detail");
 //
-Route::get("/blog","WebController@blog");
-Route::get("/blog_detail/{id}","WebController@blog_detail");
+Route::prefix('/blog')->group(function () {
+    Route::get("/","WebController@blog");
+    Route::get("/{id}","WebController@blog_detail");
+});
 //
 Route::post("/sendemail", 'WebController@sendemail');
 Route::post("/sendscholarship", 'WebController@sendscholarship')->middleware("auth");
 //
-Route::get("/search","WebController@search");
+Route::post("/search","WebController@search");
 //
 
 Route::get("/scholarships","WebController@scholarships");

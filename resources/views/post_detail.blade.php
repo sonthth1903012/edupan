@@ -86,8 +86,17 @@
 
                     </div>
                     <!--================Comment Area =================-->
-                    <div>
-
+                    <div class="col-12 col-md-6">
+                        <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="400ms">
+                            <div class="testimonial-thumb">
+                                <img src="img/bg-img/t1.jpg" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <h5>Great teachers</h5>
+                                <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna.</p>
+                                <h6><span>Maria Smith,</span> Student</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
