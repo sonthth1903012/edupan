@@ -7,7 +7,7 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="footer-widget mb-100">
                         <div class="widget-title">
-                            <a href="#"><img src="img/core-img/logo5.png" alt=""></a>
+                            <a href="#"><img src={{asset("img/core-img/logo5.png")}} alt=""></a>
                         </div>
                         <p>
                             Education is a human right. We are a nonprofit because we
@@ -46,12 +46,12 @@
                             <h6>Gallery</h6>
                         </div>
                         <div class="gallery-list d-flex justify-content-between flex-wrap">
-                            <a href="img/bg-img/gallery1.jpg" class="gallery-img" title="Gallery Image 1"><img src="img/bg-img/gallery1.jpg" alt=""></a>
-                            <a href="img/bg-img/gallery2.jpg" class="gallery-img" title="Gallery Image 2"><img src="img/bg-img/gallery2.jpg" alt=""></a>
-                            <a href="img/bg-img/gallery3.jpg" class="gallery-img" title="Gallery Image 3"><img src="img/bg-img/gallery3.jpg" alt=""></a>
-                            <a href="img/bg-img/gallery4.jpg" class="gallery-img" title="Gallery Image 4"><img src="img/bg-img/gallery4.jpg" alt=""></a>
-                            <a href="img/bg-img/gallery5.jpg" class="gallery-img" title="Gallery Image 5"><img src="img/bg-img/gallery5.jpg" alt=""></a>
-                            <a href="img/bg-img/gallery6.jpg" class="gallery-img" title="Gallery Image 6"><img src="img/bg-img/gallery6.jpg" alt=""></a>
+                            <a href="img/bg-img/gallery1.jpg" class="gallery-img" title="Gallery Image 1"><img src={{asset("img/bg-img/gallery1.jpg")}} alt=""></a>
+                            <a href="img/bg-img/gallery2.jpg" class="gallery-img" title="Gallery Image 2"><img src={{asset("img/bg-img/gallery2.jpg")}} alt=""></a>
+                            <a href="img/bg-img/gallery3.jpg" class="gallery-img" title="Gallery Image 3"><img src={{asset("img/bg-img/gallery3.jpg")}} alt=""></a>
+                            <a href="img/bg-img/gallery4.jpg" class="gallery-img" title="Gallery Image 4"><img src={{asset("img/bg-img/gallery4.jpg")}} alt=""></a>
+                            <a href="img/bg-img/gallery5.jpg" class="gallery-img" title="Gallery Image 5"><img src={{asset("img/bg-img/gallery5.jpg")}} alt=""></a>
+                            <a href="img/bg-img/gallery6.jpg" class="gallery-img" title="Gallery Image 6"><img src={{asset("img/bg-img/gallery6.jpg")}} alt=""></a>
                         </div>
                     </div>
                 </div>
