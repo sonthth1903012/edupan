@@ -15,7 +15,19 @@ use Illuminate\Support\Facades\Mail;
 class WebController extends Controller
 {
     public function home(){
-        return view ("home");
+        if(!Cache::has("home") ) {
+            $cache['news'] = Post::orderBy('created_at', 'desc')->paginate(4);
+
+            $news = $cache['news'];
+
+            $view= view("home",['news'=>$news])->render();
+
+            $now=Carbon::now();
+            $expireDate=$now->addMinutes(120);
+
+            Cache::put("home",$view,$expireDate);
+        }
+        return Cache::get("home");
     }
 
     public function about_us(){
@@ -64,6 +76,7 @@ class WebController extends Controller
     }
 
     public function post(){
+        return view("post");
     }
 
     public function post_detail(){
