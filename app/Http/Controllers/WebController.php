@@ -6,8 +6,10 @@ use App\Category;
 use App\Mail\SendEmail;
 use App\Mail\SendTicket;
 use App\Post;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
 
 class WebController extends Controller
@@ -21,10 +23,23 @@ class WebController extends Controller
     }
 
     public function blog(){
-        $news = Post::orderBy('created_at','desc')->paginate(5);
-        $category = Category::orderBy('created_at','desc')->take(4)->get();
-        $link = Post::orderBy('created_at','desc')->take(4)->get();
-        return view ("blog",['news' => $news, 'category'=>$category,'link'=>$link]);
+        if(!Cache::has("blog") ) {
+            $cache['news'] = Post::orderBy('created_at', 'desc')->paginate(5);
+            $cache['category'] = Category::orderBy('created_at', 'desc')->take(4)->get();
+            $cache['link'] = Post::orderBy('created_at', 'desc')->take(4)->get();
+
+            $news= $cache['news'];
+            $category= $cache['category'];
+            $link= $cache['link'];
+
+            $view = view("blog", ['news' => $news, 'category' => $category, 'link' => $link])->render();
+
+            $now=Carbon::now();
+            $expireDate = $now->addHours(2);
+
+            Cache::put("blog",$view,$expireDate);
+        }
+        return Cache::get("blog");
     }
 
     public function blog_detail($id){

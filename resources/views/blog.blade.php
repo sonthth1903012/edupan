@@ -21,7 +21,7 @@
                             <div class="row">
 
                                 <!-- Single Blog Start -->
-                                @foreach($news as $p)
+                                @forelse($news as $p)
                                 <div class="col-12">
                                     <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
                                         <!-- Post Thumb -->
@@ -42,7 +42,7 @@
                                 </div>
                                 @empty
                                         <h2>Not found</h2>>
-                                @endforeach
+                                @endforelse
 
                             </div>
                         </div>
