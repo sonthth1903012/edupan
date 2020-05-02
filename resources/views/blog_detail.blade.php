@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg); padding-bottom:120px">
+    <div class="breadcumb-area bg-img" style="background-image: url('{{asset('img/bg-img/breadcumb.jpg')}}'); padding-bottom:120px">
         <div class="bradcumbContent">
             <h2>Detail</h2>
         </div>
@@ -63,8 +63,9 @@
                     <div class="academy-blog-sidebar">
                         <!-- Blog Post Widget -->
                         <div class="blog-post-search-widget mb-30">
-                            <form action="#" method="post">
-                                <input type="search" name="search" id="Search" placeholder="Search">
+                            <form action="{{url('/search')}}" method="post">
+                                <input type="hidden" name="_token" value="{{csrf_token()}}";>
+                                <input type="text" name="search" placeholder="Search">
                                 <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </form>
                         </div>
@@ -72,21 +73,22 @@
                         <!-- Blog Post Catagories -->
                         <div class="blog-post-categories mb-30">
                             <h5>Categories</h5>
-                            <ul>
-                                @foreach($category as $c)
+                            @foreach($category as $c)
+                                <ul>
                                     <li><a href="#">{{$c->category_name}}</a></li>
-                                @endforeach
-                            </ul>
+                                </ul>
+                            @endforeach
                         </div>
 
                         <!-- Latest Blog Posts Area -->
                         <div class="latest-blog-posts mb-30">
                             <h5>Latest Posts</h5>
-                        @foreach($link as $l)
+                        @foreach( $link as $l)
+
                             <!-- Single Latest Blog Post -->
                                 <div class="single-latest-blog-post d-flex mb-30">
                                     <div class="latest-blog-post-thumb">
-                                        <img src={{$l->thumbnail}} alt="">
+                                        <img src= {{$l->thumbnail}} alt="">
                                     </div>
                                     <div class="latest-blog-post-content">
                                         <a href="#" class="post-title">
@@ -95,32 +97,17 @@
                                         <a href="#" class="post-date">{{$l->created_at}}</a>
                                     </div>
                                 </div>
-                        @endforeach
+                            @endforeach
 
-                        <!-- Contact us! Area -->
-                        <div class="latest-blog-posts mb-30">
-                            <h5>Contact us!</h5>
-                            <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
-                                <form action="#" method="post">
-                                    <input type="email" class="form-control" id="email" placeholder="E-mail" required>
-                                    <button class="btn academy-btn mt-30" type="submit">Send email</button>
-                                </form>
-                            </div>
+
                         </div>
 
                         <!-- Add Widget -->
-                        <div class="add-widget" style="padding-bottom: 35px">
-                            <a href="#"><img src="img/blog-img/add.png" alt=""></a>
+                        <div class="add-widget" style="padding-bottom: 50px">
+                            <a href="#"><img src={{asset("img/blog-img/add.png")}} alt=""></a>
                         </div>
 
-                        <!-- Tag Area -->
-                        <div class="latest-blog-posts mb-30">
-                            <h5>Tags</h5>
-                            <!-- Single tags -->
-                            <span style="padding-left:20px">tag1</span>
-                            <span style="padding-left:20px">tag2</span>
-                            <span style="padding-left:20px">tag3</span>
-                        </div>
+
 
                     </div>
                     </div>

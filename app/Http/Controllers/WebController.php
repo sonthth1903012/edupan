@@ -36,7 +36,7 @@ class WebController extends Controller
             $view = view("blog", ['news' => $news, 'category' => $category, 'link' => $link])->render();
 
             $now=Carbon::now();
-            $expireDate = $now->addHours(2);
+            $expireDate = $now->addMinutes(5);
 
             Cache::put("blog",$view,$expireDate);
         }
