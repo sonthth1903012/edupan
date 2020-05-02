@@ -23,24 +23,31 @@ class WebController extends Controller
         return view ("about_us");
     }
 
-    public function blog(){
-        if(!Cache::has("blog") ) {
-            $cache['news'] = Post::orderBy('created_at', 'desc')->paginate(5);
-            $cache['category'] = Category::orderBy('created_at', 'desc')->take(4)->get();
-            $cache['link'] = Post::orderBy('created_at', 'desc')->take(4)->get();
+//    public function blog(){
+//        if(!Cache::has("blog") ) {
+//            $cache['news'] = Post::orderBy('created_at', 'desc')->paginate(5);
+//            $cache['category'] = Category::orderBy('created_at', 'desc')->take(4)->get();
+//            $cache['link'] = Post::orderBy('created_at', 'desc')->take(4)->get();
+//
+//            $news= $cache['news'];
+//            $category= $cache['category'];
+//            $link= $cache['link'];
+//
+//            $view = view("blog", ['news' => $news, 'category' => $category, 'link' => $link])->render();
+//
+//            $now=Carbon::now();
+//            $expireDate = $now->addMinutes(0);
+//
+//            Cache::put("blog",$view,$expireDate);
+//        }
+//        return Cache::get("blog");
+//    }
 
-            $news= $cache['news'];
-            $category= $cache['category'];
-            $link= $cache['link'];
-
-            $view = view("blog", ['news' => $news, 'category' => $category, 'link' => $link])->render();
-
-            $now=Carbon::now();
-            $expireDate = $now->addMinutes(5);
-
-            Cache::put("blog",$view,$expireDate);
-        }
-        return Cache::get("blog");
+    public function blog() {
+        $news = Post::orderBy('created_at', 'desc')->paginate(5);
+        $category = Category::orderBy('created_at', 'desc')->take(4)->get();
+        $link = Post::orderBy('created_at', 'desc')->take(4)->get();
+        return view("blog",['news' => $news, 'category' => $category, 'link' => $link]);
     }
 
     public function blog_detail($id){
