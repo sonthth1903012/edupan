@@ -53,10 +53,11 @@
                                     <ul class="dropdown">
                                         <li><a href="{{url('/blog')}}">Blog</a></li>
                                         <li><a href="{{url('/post')}}">Post</a></li>
-                                        <li><a class="dropdown-item" href="{{url('/post_detail')}}">WORKSHOP</a></li>
+                                        <li><a class="dropdown-item" href="{{url('/post_detail')}}">Post_Detail</a></li>
                                         <li><a class="dropdown-item" href="{{url('/scholarships')}}">SCHOLARSHIPS</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="{{url('/workshop')}}">WORKSHOP</a></li>
                                 <li><a href="{{url('/about_us')}}">About Us</a></li>
                                 <li><a href="{{url('/contact')}}">Contact</a></li>
                                 <li><a href="{{url('/donate')}}">Donate</a></li>

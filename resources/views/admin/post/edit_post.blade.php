@@ -104,10 +104,12 @@
                                             <input name="post_thumbnail" placeholder="This is link thumbnail" id="post_thumbnail" value="{{$post->thumbnail}}" class="form-control" type="text">
                                             <img id="thumbnail_review" width="100%">
                                             <script type="text/javascript">
-                                                document.getElementById("post_thumbnail").onblur = ()=>{
+                                                let setIMG = ()=>{
                                                     let imgSRC = document.getElementById("post_thumbnail").value;
                                                     document.getElementById("thumbnail_review").setAttribute("src", imgSRC);
-                                                }
+                                                };
+                                                setIMG();
+                                                document.getElementById("post_thumbnail").onchange = ()=>setIMG();
                                             </script>
                                         </div>
                                     </div>
