@@ -154,10 +154,10 @@
                 <div class="col-12">
                     <div class="cta-content text-center">
                         <h3>You can donate us
-                            <a class=academy-btn href="{{asset('/donate')}}" style="text-decoration: underline;
+                            <a href="{{asset('/donate')}}" style="text-decoration: underline;
                             color:white; font-size: 24pt; font-weight:bold">here</a>
                             or contact us
-                            <a class=academy-btn href="{{asset('/contact')}}" style="text-decoration: underline;
+                            <a href="{{asset('/contact')}}" style="text-decoration: underline;
                             color:white; font-size: 24pt; font-weight:bold">here!</a>
                         </h3>
                     </div>

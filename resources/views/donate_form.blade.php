@@ -26,7 +26,7 @@
                                     <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
                                         <form method="post" action="{{url('/sendemail')}}">
                                             @csrf
-                                            <a>Select your reward:</a>
+                                            <a>Select your reward:<span style="color:red;">*</span></a>
                                             <br/>
                                             <br/>
                                             <input type="checkbox" id="value1" name="value1" value="100">
@@ -43,7 +43,7 @@
                                             <br/>
                                             <input type="text" class="form-control" id="name" placeholder="" required>
                                             <br/>
-                                            <a>Select your payment:</a>
+                                            <a>Select your payment:<span style="color:red;">*</span></a>
                                             <br/>
                                             <br/>
                                             <img style="padding: 10px 25px 0 0" src="{{asset("img/clients-img/pay1.png")}}">

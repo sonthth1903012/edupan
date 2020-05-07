@@ -59,7 +59,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-lg-4">
                     <div class="academy-blog-sidebar">
                         <!-- Blog Post Widget -->
                         <div class="blog-post-search-widget mb-30">
@@ -69,7 +69,6 @@
                                 <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </form>
                         </div>
-
                         <!-- Blog Post Catagories -->
                         <div class="blog-post-categories mb-30">
                             <h5>Categories</h5>
@@ -79,12 +78,28 @@
                                 </ul>
                             @endforeach
                         </div>
-
+                        <!-- Tag Area -->
+                        <div class="latest-blog-posts mb-30">
+                            <h5>Tags</h5>
+                            <!-- Single tags -->
+                            <span style="padding-left:20px">tag1</span>
+                            <span style="padding-left:20px">tag2</span>
+                            <span style="padding-left:20px">tag3</span>
+                        </div>
+                        <!-- Contact us! Area -->
+                        <div class="latest-blog-posts mb-30">
+                            <h5>Contact us!</h5>
+                            <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
+                                <form action="#" method="post">
+                                    <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+                                    <button class="btn academy-btn mt-30" type="submit">Send email</button>
+                                </form>
+                            </div>
+                        </div>
                         <!-- Latest Blog Posts Area -->
                         <div class="latest-blog-posts mb-30">
                             <h5>Latest Posts</h5>
                         @foreach( $link as $l)
-
                             <!-- Single Latest Blog Post -->
                                 <div class="single-latest-blog-post d-flex mb-30">
                                     <div class="latest-blog-post-thumb">
@@ -98,13 +113,10 @@
                                     </div>
                                 </div>
                             @endforeach
-
-
                         </div>
-
                         <!-- Add Widget -->
-                        <div class="add-widget">
-                            <a href="#"><img src="img/blog-img/add.png" alt=""></a>
+                        <div class="add-widget" style="padding-bottom: 50px">
+                            <a href="#"><img src={{asset("img/blog-img/add.png")}} alt=""></a>
                         </div>
                     </div>
                 </div>

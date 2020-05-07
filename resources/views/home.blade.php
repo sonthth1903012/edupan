@@ -286,7 +286,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
-                        <h3>Do you want to learn at our Edupan? Join us now!</h3>
+                        <h3>Do you want to join our Edupan? Join us now!</h3>
                         <a href="{{url('/contact')}}" class="btn academy-btn">Join now!</a>
                     </div>
                 </div>
