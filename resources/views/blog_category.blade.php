@@ -102,12 +102,12 @@
                              @foreach( $link as $l)
 
                             <!-- Single Latest Blog Post -->
-                                <div class="single-latest-blog-post d-flex mb-30">
+                                <div class="single-latest-blog-post d-flex mb-30" href="{{url("blog/category/{$l->id}")}}">
                                     <div class="latest-blog-post-thumb">
-                                        <img src= {{$l->thumbnail}} alt="">
+                                        <img href="{{url("blog/{$l->id}")}}" src= {{$l->thumbnail}} alt="">
                                     </div>
                                     <div class="latest-blog-post-content">
-                                        <a href="#" class="post-title">
+                                        <a href="{{url("blog/{$l->id}")}}" class="post-title">
                                             <h6>{{$l->title}}</h6>
                                         </a>
                                         <a href="#" class="post-date">{{$l->created_at}}</a>
