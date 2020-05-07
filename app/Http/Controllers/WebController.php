@@ -57,6 +57,13 @@ class WebController extends Controller
         return view ("blog_detail",['post' => $post, 'category'=>$category,'link'=>$link]);
     }
 
+    public function blog_category($id){
+        $news = Post::orderBy('created_at', 'desc')->where('category_id', $id)->paginate(5);
+        $category = Category::all();
+        $link = Post::orderBy('created_at','desc')->take(4)->get();
+        return view ("blog_category",['news'=> $news,'category'=>$category,'link'=>$link]);
+    }
+
     public function search(Request $request){
         $search = $request -> search;
         $result = Post::where('title','like',"%$search%")->orWhere('shortDesc','like',"%$search%")
@@ -81,6 +88,9 @@ class WebController extends Controller
 
     public function donate(){
         return view ("donate");
+    }
+   public function donate_page(){
+        return view ("donate_page");
     }
 
     function sendemail(Request $request)

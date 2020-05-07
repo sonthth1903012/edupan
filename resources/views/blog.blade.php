@@ -72,9 +72,28 @@
                                 <h5>Categories</h5>
                                 @foreach($category as $c)
                                 <ul>
-                                    <li><a href="#">{{$c->category_name}}</a></li>
+                                    <li><a href="{{url("blog/category/{$c->id}")}}">{{$c->category_name}}</a></li>
                                 </ul>
                                 @endforeach
+                            </div>
+
+                            <!-- Tag Area -->
+                            <div class="latest-blog-posts mb-30">
+                                <h5>Tags</h5>
+                                <!-- Single tags -->
+                                <span style="padding-left:20px">tag1</span>
+                                <span style="padding-left:20px">tag2</span>
+                                <span style="padding-left:20px">tag3</span>
+                            </div>
+                            <!-- Contact us! Area -->
+                            <div class="latest-blog-posts mb-30">
+                                <h5>Contact us!</h5>
+                                <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
+                                    <form action="#" method="post">
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+                                        <button class="btn academy-btn mt-30" type="submit">Send email</button>
+                                    </form>
+                                </div>
                             </div>
 
                             <!-- Latest Blog Posts Area -->
@@ -98,6 +117,7 @@
 
 
                             </div>
+
 
                             <!-- Add Widget -->
                             <div class="add-widget">
