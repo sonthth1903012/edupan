@@ -45,7 +45,7 @@ class WebController extends Controller
 
     public function blog() {
         $news = Post::orderBy('created_at', 'desc')->paginate(5);
-        $category = Category::orderBy('created_at', 'desc')->take(4)->get();
+        $category = Category::orderBy('created_at', 'asc')->take(4)->get();
         $link = Post::orderBy('created_at', 'desc')->take(4)->get();
         return view("blog",['news' => $news, 'category' => $category, 'link' => $link]);
     }
@@ -59,7 +59,7 @@ class WebController extends Controller
 
     public function blog_category($id){
         $news = Post::orderBy('created_at', 'desc')->where('category_id', $id)->paginate(5);
-        $category = Category::all();
+        $category = Category::orderBy('created_at', 'asc')->take(4)->get();
         $link = Post::orderBy('created_at','desc')->take(4)->get();
         return view ("blog_category",['news'=> $news,'category'=>$category,'link'=>$link]);
     }
@@ -89,8 +89,8 @@ class WebController extends Controller
     public function donate(){
         return view ("donate");
     }
-   public function donate_page(){
-        return view ("donate_page");
+   public function donate_form(){
+        return view ("donate_form");
     }
 
     function sendemail(Request $request)

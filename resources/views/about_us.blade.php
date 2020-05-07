@@ -22,6 +22,18 @@
                     </div>
                 </div>
             </div>
+                        <div class="row" style="padding-bottom: 20px">
+                            <div class="col-12 col-md-12 wow fadeInUp" data-wow-delay="400ms" style="font-size: 15pt">
+                                <p>What started as one man tutoring his cousin has grown
+                                    into a more than 150-person organization. We’re a diverse
+                                    team that has come together to work on an audacious mission:
+                                    to help and provide a free world-class education for anyone,
+                                    anywhere. We are developers, teachers, designers, strategists,
+                                    scientists, and content specialists who passionately believe
+                                    in inspiring the world to learn.
+                                    A few great people can make a big difference.</p>
+                            </div>
+                        </div>
             <div class="row">
                 <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                     <p>You’re joining a global education. Millions of
@@ -55,46 +67,41 @@
     </section>
     <!-- ##### About Us Area End ##### -->
 
-    <!-- ##### Team Area Start ##### -->
     <section class="teachers-area" style="padding-bottom: 50px">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                        <h3>From humble beginnings to a world-class team</h3>
+                        <h3>We create the whole new education system</h3>
                     </div>
                 </div>
             </div>
-
             <div class="row section-padding-0-100">
-                <div class="row">
-                    <div class="col-12 col-md-12 wow fadeInUp" data-wow-delay="400ms" style="font-size: 15pt">
-                        <p>What started as one man tutoring his cousin has grown
-                            into a more than 150-person organization. We’re a diverse
-                            team that has come together to work on an audacious mission:
-                            to help and provide a free world-class education for anyone,
-                            anywhere. We are developers, teachers, designers, strategists,
-                            scientists, and content specialists who passionately believe
-                            in inspiring the world to learn.
-                            A few great people can make a big difference.</p>
-                    </div>
-
+            <div class="row">
+                <div class="col-12 col-md-12 wow fadeInUp" data-wow-delay="400ms" style="font-size: 15pt">
+                    <p>Today, we have already located in 34 nations includes: USA, Finland,
+                        Turky, Vietnam, India, Thailand and so on. We are creating and widening the
+                        network and information system to every country, everywhere in order to help everybody
+                        to connect and working as easy as possible. We have also tried to help very local
+                        people and their children to get to school and learn for the further future. We have
+                        adopted many support form governments and people form all around the world - special thanks to
+                        Bill and Melina Gate inc., Mr.Donald Trump, Mr.Jeff Bezos and Mr Elon Musk for send so much
+                        facilities and money for our campaigns.
+                    </p>
                 </div>
             </div>
-
-
+        </div>
             <div class="row">
                 <!-- Single Teachers -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="400ms">
                         <!-- Thumbnail -->
                         <div class="teachers-thumbnail">
-                            <img src="img/bg-img/tea1.jpg" alt="">
+                            <img src="img/bg-img/mr_bezos.jpg" alt="">
                         </div>
                         <!-- Meta Info -->
                         <div class="teachers-info mt-30">
-                            <h5>Maria D. Smith</h5>
-                            <span>Marketing Proffesor</span>
+                            <h5>Mr.Zeff Bezos</h5>
                         </div>
                     </div>
                 </div>
@@ -103,12 +110,11 @@
                     <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="500ms">
                         <!-- Thumbnail -->
                         <div class="teachers-thumbnail">
-                            <img src="img/bg-img/tea2.jpg" alt="">
+                            <img src="img/bg-img/mr_trump.jpg" alt="">
                         </div>
                         <!-- Meta Info -->
                         <div class="teachers-info mt-30">
-                            <h5>Simon Duval</h5>
-                            <span>Digital Proffesor</span>
+                            <h5>Mr.Donald Trump</h5>
                         </div>
                     </div>
                 </div>
@@ -117,12 +123,11 @@
                     <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="600ms">
                         <!-- Thumbnail -->
                         <div class="teachers-thumbnail">
-                            <img src="img/bg-img/tea3.jpg" alt="">
+                            <img src="img/bg-img/mr_gate.png" alt="">
                         </div>
                         <!-- Meta Info -->
                         <div class="teachers-info mt-30">
-                            <h5>James Hogan</h5>
-                            <span>HTML Proffesor</span>
+                            <h5>Mr.Bill Gate</h5>
                         </div>
                     </div>
                 </div>
@@ -131,33 +136,37 @@
                     <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="700ms">
                         <!-- Thumbnail -->
                         <div class="teachers-thumbnail">
-                            <img src="img/bg-img/tea4.jpg" alt="">
+                            <img src="img/bg-img/mr_musk.jpg" alt="">
                         </div>
                         <!-- Meta Info -->
                         <div class="teachers-info mt-30">
-                            <h5>Claudia Williams</h5>
-                            <span>Marketing Proffesor</span>
+                            <h5>Mr.Elon Musk</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ##### Features Area Start ##### -->
-
     <!-- ##### CTA Area Start ##### -->
     <div class="call-to-action-area">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
-                        <h3>Do you want to learn at our Edupan? Join us now!</h3>
-                        <a href="#" class="btn academy-btn">Join now!</a>
+                    <div class="cta-content text-center">
+                        <h3>You can donate us
+                            <a class=academy-btn href="{{asset('/donate')}}" style="text-decoration: underline;
+                            color:white; font-size: 24pt; font-weight:bold">here</a>
+                            or contact us
+                            <a class=academy-btn href="{{asset('/contact')}}" style="text-decoration: underline;
+                            color:white; font-size: 24pt; font-weight:bold">here!</a>
+                        </h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- ##### CTA Area End ##### -->
+
+
 
 @endsection
