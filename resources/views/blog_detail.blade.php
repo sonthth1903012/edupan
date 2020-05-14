@@ -46,8 +46,8 @@
                         </div>
                         <div class="col-lg-9 col-md-9 blog_details">
                             <h2>{{$post->title}}</h2>
-                            <p class="excert">
-                            {{$post->content}}</p>
+                            <div class="excert">
+                            {{$post->content}}</div>
 
                         </div>
                     </div>
