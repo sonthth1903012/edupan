@@ -189,14 +189,7 @@
                             <a href="#"><img src="img/blog-img/add.png" alt=""></a>
                         </div>
 
-                        <!-- Tag Area -->
-                        <div class="latest-blog-posts mb-30">
-                            <h5>Tags</h5>
-                            <!-- Single tags -->
-                            <span style="padding-left:20px">tag1</span>
-                            <span style="padding-left:20px">tag2</span>
-                            <span style="padding-left:20px">tag3</span>
-                        </div>
+
 
                     </div>
                 </div>
