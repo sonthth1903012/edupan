@@ -47,37 +47,9 @@
                         <div class="col-lg-9 col-md-9 blog_details">
                             <h2>{{$post->title}}</h2>
                             <p class="excert">
-                            </p>{{$post->content}}{{$post->content}}{{$post->content}}{{$post->content}}{{$post->content}}<p>
+                            {{$post->content}}</p>
 
                         </div>
-                        <div class="col-lg-12 col-md-12 blog_details" >
-                            <p class="excert">March Hare. 'It was a large mushroom growing near her,
-                                about four feet high. 'I wish I hadn't mentioned Dinah!'
-                                she said to the shore, and then dipped suddenly down, so suddenly that Alice had not. </p>
-                        </div>
-                        <img src="{{asset("\img\bg-img\charity03.jpg")}}">
-                        <br/>
-                        <br/>
-
-                        <p class="excert" style="padding-top:15px">March Hare. 'It was a large mushroom growing near her,
-                                about four feet high. 'I wish I hadn't mentioned Dinah!'
-                                she said to the shore, and then dipped suddenly down, so suddenly that Alice had not.
-                            March Hare. 'It was a large mushroom growing near her,
-                            about four feet high. 'I wish I hadn't mentioned Dinah!'
-                            she said to the shore, and then dipped suddenly down, so suddenly that Alice had not.
-                            March Hare. 'It was a large mushroom growing near her,
-                            about four feet high. 'I wish I hadn't mentioned Dinah!'
-                            she said to the shore, and then dipped suddenly down, so suddenly that Alice had not.
-                            March Hare. 'It was a large mushroom growing near her,
-                            about four feet high. 'I wish I hadn't mentioned Dinah!'
-                            she said to the shore, and then dipped suddenly down, so suddenly that Alice had not.
-                            March Hare. 'It was a large mushroom growing near her,
-                            about four feet high. 'I wish I hadn't mentioned Dinah!'
-                            she said to the shore, and then dipped suddenly down, so suddenly that Alice had not.</p>
-
-
-
-
                     </div>
                     <!--================Nav Post Area =================-->
                     <!--================Comment Area =================-->
