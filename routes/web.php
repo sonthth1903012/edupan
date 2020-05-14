@@ -20,7 +20,7 @@ Route::get("/","WebController@home");
 Route::get("/about_us","WebController@about_us");
 Route::get("/contact","WebController@contact");
 Route::get("/donate","WebController@donate");
-Route::get("/donate_form","WebController@donate_form");
+Route::get("/donate_form","WebController@donate_form")->middleware("auth");
 Route::get("/thanks", 'WebController@thanks');
 //
 Route::get("/post","WebController@post");

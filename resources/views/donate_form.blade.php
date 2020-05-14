@@ -65,8 +65,6 @@
                                             <input type="email" class="form-control" id="email" placeholder="" required>
                                             <a>Phone: <span style="color:red;">*</span></a>
                                             <input type="tel" class="form-control" id="email" placeholder="" required>
-                                            <a>Email: <span style="color:red;">*</span></a>
-                                            <input type="text" class="form-control" id="email" placeholder="" required>
                                             <a>Message:</a>
                                             <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder=""></textarea>
                                             <div class="text-center" style="float:right; padding-top: 50px">
