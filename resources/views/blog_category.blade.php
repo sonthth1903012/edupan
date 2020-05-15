@@ -77,17 +77,6 @@
                             @endforeach
                         </div>
 
-                        <!-- Contact us! Area -->
-                        <div class="latest-blog-posts mb-30">
-                            <h5>Contact us!</h5>
-                            <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
-                                <form action="#" method="post">
-                                    <input type="email" class="form-control" id="email" placeholder="E-mail" required>
-                                    <button class="btn academy-btn mt-30" type="submit">Send email</button>
-                                </form>
-                            </div>
-                        </div>
-
                         <!-- Latest Blog Posts Area -->
                         <div class="latest-blog-posts mb-30">
                             <h5>Latest Posts</h5>
