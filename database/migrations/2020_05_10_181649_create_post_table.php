@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePost extends Migration
+class CreatePostTable extends Migration
 {
     /**
      * Run the migrations.
@@ -20,12 +20,11 @@ class CreatePost extends Migration
             $table->longText("content")->nullable();
             $table->text("shortDesc")->nullable();
             $table->string("thumbnail")->nullable();
+            $table->unsignedBigInteger("category_id");
+            $table->unsignedBigInteger("user_id");
 
-            @$table->unsignedBigInteger("category_id");
-            @$table->unsignedBigInteger("user_id");
-            @$table->foreign("category_id")->references("id")->on("category");
-            @$table->foreign("user_id")->references("id")->on("users");
-
+            $table->foreign("category_id")->references("id")->on("category");
+            $table->foreign("user_id")->references("id")->on("users");
             $table->timestamps();
         });
     }

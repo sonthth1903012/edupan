@@ -28,9 +28,9 @@
                                                class="form-control @if($errors->has("category_name"))is-invalid @else is-valid @endif" type="text">
                                     </div>
                                 </div>
-                                @if($errors->has("brand_name"))
+                                @if($errors->has("category_name"))
                                     <div class="invalid-feedback">
-                                        {{$errors->first("brand_name")}}
+                                        {{$errors->first("category_name")}}
                                     </div>
                                 @endif
                             </div>

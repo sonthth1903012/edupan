@@ -54,8 +54,14 @@
                                         <li><a href="{{url('/blog')}}">Blog</a></li>
                                         <li><a href="{{url('/post')}}">Post</a></li>
                                         <li><a href="{{url('/workshop')}}">WORKSHOP</a></li>
-                                        <li><a class="dropdown-item" href="{{url('/scholarships')}}">SCHOLARSHIPS</a></li>
+                                        <li><a class="dropdown-item" href="{{url('/scholarship/all')}}">SCHOLARSHIPS</a></li>
                                     </ul>
+
+                                </li>
+                                <li>
+{{--                                    @foreach(\App\Category::all() as $c)--}}
+{{--                                        <a class="dropdown-item" href="{{url('/workshop')}}">{{$c->category_name}}</a>--}}
+{{--                                    @endforeach--}}
                                 </li>
                                 <li><a href="{{url('/about_us')}}">About Us</a></li>
                                 <li><a href="{{url('/contact')}}">Contact</a></li>

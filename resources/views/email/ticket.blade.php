@@ -1,7 +1,7 @@
 @component('mail::message')
 
     Dear, {{$data['name']}} !
-    Thank for cantact us!
+    Thank for contact us!
 
 @component('mail::button', ['url' => 'edupan-project.herokuapp.com'])
 Button Text
