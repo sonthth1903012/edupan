@@ -38,13 +38,24 @@ $factory->define(\App\Category::class,function (Faker $faker){
 $factory->define(\App\Post::class,function (Faker $faker){
     return [
         'title' => $faker->jobTitle,
-        'author'=> $faker->name,
         'content'=> $faker->realText(),
         'shortDesc'=> $faker->text,
         'thumbnail'=> "https://source.unsplash.com/random/200x200?sig=".random_int(1,1000),
         'category_id'=> random_int(1,3),
         'user_id' => random_int(1,3),
     ];
+});
+
+$factory->define(\App\Workshop::class,function (Faker $faker){
+    return [
+        'location' => $faker->address,
+        'time'=> $faker->dateTime(),
+        'capacity' => random_int(100,500),
+        'attendees' => random_int(50,100),
+        'fee' => random_int(100,500),
+        'post_id' => random_int(1,5),
+    ];
+
 });
 
 $factory->define(\App\Comment::class,function (Faker $faker){

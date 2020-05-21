@@ -16,7 +16,6 @@ class CreatePost extends Migration
         Schema::create('post', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text("title")->nullable();
-            $table->string("author")->nullable();
             $table->longText("content")->nullable();
             $table->text("shortDesc")->nullable();
             $table->string("thumbnail")->nullable();

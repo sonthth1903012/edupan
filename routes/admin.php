@@ -30,6 +30,14 @@ Route::get('post/edit_post/{id}',"AdminController@postEdit");
 Route::post('post/update_post/{id}',"AdminController@postUpdate");
 Route::get('post/delete_post/{id}',"AdminController@postDelete");
 
+Route::get('workshop',"AdminController@workshop");
+Route::get('workshop/create_workshop',"AdminController@workshopCreate");
+Route::post('workshop/store_workshop',"AdminController@workshopStore");
+
+Route::get('workshop/edit_workshop/{id}',"AdminController@workshopEdit");
+Route::post('workshop/update_workshop/{id}',"AdminController@workshopUpdate");
+Route::get('workshop/delete_workshop/{id}',"AdminController@workshopDelete");
+
 
 Route::get('comment',"AdminController@comment");
 Route::get('comment/create_comment',"AdminController@commentCreate");

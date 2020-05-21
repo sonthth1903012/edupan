@@ -9,7 +9,7 @@ class Post extends Model
     //
     protected $table = 'post';
 
-    protected $fillable = ['title','author','content','shortDesc','thumbnail','user_id','category_id'];
+    protected $fillable = ['title','content','shortDesc','thumbnail','user_id','category_id'];
 
     public function Category(){
         return $this->belongsTo("\App\Category");
@@ -17,6 +17,10 @@ class Post extends Model
 
     public function User(){
         return $this->belongsTo("\App\User");
+    }
+
+    public function Workshop(){
+        return $this->hasMany("\App\Workshop");
     }
 
 

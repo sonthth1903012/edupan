@@ -41,8 +41,10 @@ Route::post("/search","WebController@search");
 Route::get("/scholarships","WebController@scholarships");
 Route::get("/scholarships_detail","WebController@scholarships_detail");
 Route::get("/form_scholarships","WebController@form_scholarships");
-Route::get("/workshop","WebController@workshop");
 
+Route::get("/workshop","WebController@workshop");
+Route::get("/workshop_detail/{id}","WebController@workshop_detail");
+Route::get("/workshop_form","WebController@workshop_form");
 //
 Auth::routes();
 

@@ -6,6 +6,7 @@ use App\Category;
 use App\Mail\SendEmail;
 use App\Mail\SendTicket;
 use App\Post;
+use App\Workshop;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -129,11 +130,22 @@ class WebController extends Controller
     public function scholarships_detail(){
         return view ("scholarships_detail");
     }
-    public function workshop(){
-        return view ("workshop");
-    }
+
     public function form_scholarships(){
         return view("form_scholarships");
+    }
+
+    public function workshop(){
+        $workshops = Workshop::orderBy('created_at','desc')->take(10)->get();
+        return view ("workshop.workshop",['workshops'=>$workshops]);
+    }
+    public function workshop_detail($id){
+        $w = Workshop::find($id);
+        $ow = Workshop::where('id',"!=",$w->id)->take(4)->get();
+        return view ("workshop.workshop_detail",['w'=>$w,'ow'=>$ow]);
+    }
+    public function workshop_form(){
+        return view ("workshop.workshop_form");
     }
 
 }

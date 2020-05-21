@@ -27,8 +27,8 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Danh sách Post</h5>
-                            <a href="{{url("admin/post/create_post")}}" class="btn btn-default my-1">Thêm post</a>
+                            <h5 class="card-title text-center">Danh sách Workshop</h5>
+                            <a href="{{url("admin/workshop/create_workshop")}}" class="btn btn-default my-1">Add Workshop</a>
                             <div class="table-responsive">
                                 <table id="zero_config" class="table table-striped table-bordered">
                                     <thead>
@@ -36,29 +36,40 @@
                                         <th>ID</th>
                                         <th>Title</th>
                                         <th>Content</th>
-                                        <th>Category</th>
-                                        <th>User</th>
+                                        <th>Category - User</th>
                                         <th>shortDesc</th>
                                         <th>Thumbnail</th>
+                                        <th>Location - Time</th>
+                                        <th>Attendees/Capacity - Fee</th>
                                         <th>Controller</th>
                                     </tr>
                                     </thead>
                                     <tbody>
 
-                                    @foreach($posts as $p)
+                                    @foreach($workshop as $w)
                                         <tr>
-                                            <td>{{$p->id}}</td>
-                                            <td>{{$p->title}}</td>
-                                            <td>{{$p->content}}</td>
-                                            <td>{{$p->Category->category_name}}</td>
-                                            <td>{{$p->User->name}}</td>
-                                            <td>{{$p->shortDesc}}</td>
+                                            <td>{{$w->id}}</td>
+                                            <td>{{$w->Post->title}}</td>
+                                            <td>{{$w->Post->content}}</td>
                                             <td>
-                                                <img src="{{$p->thumbnail}}" width="100">
+                                                <p>{{$w->Post->Category->category_name}}</p>
+                                                <p>{{$w->Post->User->name}}</p>
+                                            </td>
+                                            <td>{{$w->Post->shortDesc}}</td>
+                                            <td>
+                                                <img src="{{$w->Post->thumbnail}}" width="100">
                                             </td>
                                             <td>
-                                                <a href="{{url("admin/post/edit_post",['id'=>$p->id])}}">Edit</a>
-                                                <a href="{{url("admin/post/delete_post",['id'=>$p->id])}}">Delete</a>
+                                                <p>{{$w->location}}</p>
+                                                <p>{{$w->time}}</p>
+                                            </td>
+                                            <td>
+                                                <p>{{$w->attendees}}/{{$w->capacity}}</p>
+                                                <p>{{$w->fee}}</p>
+                                            </td>
+                                            <td>
+                                                <a href="{{url("admin/post/edit_workshop",['id'=>$w->id])}}">Edit</a>
+                                                <a href="{{url("admin/post/delete_workshop",['id'=>$w->id])}}">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach

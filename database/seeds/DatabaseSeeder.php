@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,10 +22,13 @@ class DatabaseSeeder extends Seeder
             'address' => "Ha Noi"
         ]);
 
-        $this->call(UserSeeder::class);
-        $this->call(CategorySeeder::class);
-        $this->call(CommentSeeder::class);
-        $this->call(PostSeeder::class);
+        DB::table("category")->insert([
+            'category_name' => 'WORKSHOP'
+        ]);
 
+//        $this->call(UserSeeder::class);
+//        $this->call(CategorySeeder::class);
+//        $this->call(PostSeeder::class);
+//        $this->call(CommentSeeder::class);
     }
 }
