@@ -146,6 +146,27 @@ class AdminController extends Controller
         return redirect()->to("admin/post");
     }
 
+    public function postDelete($id){
+        $post = Post::find($id);
+        $workshop = $post -> Workshop();
+        $comment = Comment::all()->where('post_id',$post->id);
+        try {
+            $workshop ->each(function ($c) {
+                $c->delete();
+            });
+            $comment ->each(function ($c) {
+                $c->delete();
+            });
+            $post->delete();
+        }
+        catch (\Exception $e){
+            dd($e);
+            return redirect()->back();
+        }
+
+        return redirect()->to("admin/post");
+    }
+
     //Workshop Collection
     public function workshop(){
         $workshop = Workshop::all();
@@ -172,11 +193,7 @@ class AdminController extends Controller
                 "shortDesc"=> $request->get("post_desc"),
                 "thumbnail"=> $request->get("post_thumbnail")
             ]);
-        }catch (\Exception $e){
-            dd($e);
-//            return redirect()->back();
-        }
-        try {
+
             $time = Carbon::parse($request->get("workshop_time"))->format('Y-m-d H:i:s');
             Workshop::create([
                 "location" => $request->get("workshop_location"),
@@ -202,6 +219,60 @@ class AdminController extends Controller
             'workshop'=>$workshop,'post'=>$post,'date'=>$date]);
     }
 
+    public function workshopUpdate($id,Request $request){
+        $workshop = Workshop::find($id);
+        $post = $workshop -> Post;
+        $request->validate([
+            "post_title"=> "required|string",
+            "post_content"=> "required|string",
+        ]);
+        try {
+            $post->update([
+                "title"=> $request->get("post_title"),
+                "category_id"=> $request->get("post_category"),
+                "user_id"=> $request->get("post_user"),
+                "content"=> $_POST['post_content'],
+                "shortDesc"=> $request->get("post_desc"),
+                "thumbnail"=> $request->get("post_thumbnail")
+            ]);
+
+            $time = Carbon::parse($request->get("workshop_time"))->format('Y-m-d H:i:s');
+            $workshop->update([
+                "location" => $request->get("workshop_location"),
+                "time" => $time,
+                "capacity" => $request->get("workshop_capacity"),
+                "fee" => $request->get("workshop_fee"),
+                "post_id" => $post -> id,
+            ]);
+        }catch (\Exception $e){
+            dd($e);
+//            return redirect()->back();
+        }
+        return redirect()->to("admin/workshop");
+    }
+
+    public function workshopDelete($id){
+        $workshop = Workshop::find($id);
+        $comment = Comment::all()->where('post_id',$workshop->post_id);
+        $post = Post::all()->where('id',$workshop->post_id);
+
+//        dd($post->id);
+        try {
+            $workshop ->delete();
+            $comment ->each(function ($c) {
+                $c->delete();
+            });
+            $post ->each(function ($c) {
+                $c->delete();
+            });
+        }
+        catch (\Exception $e){
+            dd($e);
+        }
+
+        return redirect()->to("admin/workshop");
+    }
+
     //Comment Collection
     public function comment(){
         $comments = Comment::all();
@@ -217,37 +288,6 @@ class AdminController extends Controller
     public function commentEdit($id){
         $comment = Post::find($id);
         return view("admin.comment.edit_comment",['comment'=>$comment]);
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public function postDelete($id){
-        $post = Post::find($id);
-        $comment = Comment::all()->where('post_id',$post->id);
-        try {
-            $comment ->each(function ($c) {
-                $c->delete();
-            });
-            $post->delete();
-        }
-        catch (\Exception $e){
-            dd($e);
-            return redirect()->back();
-        }
-
-        return redirect()->to("admin/post");
     }
 
     public function commentDelete($id){

@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <form class="form-horizontal" action="{{url("admin/workshop/update_workshop",['id'=>$post->id])}}" method="post">
+                        <form class="form-horizontal" action="{{url("admin/workshop/update_workshop",['id'=>$workshop->id])}}" method="post">
                             @csrf
                             <div class="row">
                                 <div class="card-body col-8">
