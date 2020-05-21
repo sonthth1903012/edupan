@@ -35,15 +35,24 @@ $factory->define(\App\Category::class,function (Faker $faker){
     ];
 });
 
+//$factory->define(\App\School::class,function (Faker $faker){
+//    return[
+//        'school_name'=>$faker->name,
+//        'address'=>$faker->address,
+//        'email'=>$faker->email
+//    ];
+//});
+
 $factory->define(\App\Post::class,function (Faker $faker){
     return [
         'title' => $faker->jobTitle,
         'author'=> $faker->name,
         'content'=> $faker->realText(),
         'shortDesc'=> $faker->text,
-        'thumbnail'=> "https://source.unsplash.com/random/200x200?sig=".random_int(1,1000),
-        'category_id'=> random_int(1,3),
-        'user_id' => random_int(1,3),
+        'thumbnail'=> "https://source.unsplash.com/random/200x200?sig=".random_int(1,100),
+        'category_id'=> random_int(1,5),
+//        'school_id'=>random_int(1,6),
+        'user_id' => random_int(1,5)
     ];
 });
 
@@ -54,4 +63,6 @@ $factory->define(\App\Comment::class,function (Faker $faker){
         'post_id'=> random_int(1,5)
     ];
 });
+
+
 

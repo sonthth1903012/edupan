@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class School extends Model
 {
-    //
-    protected $table = 'category';
+    protected $table= 'school';
 
-    protected $fillable = ['school_name','address','email'];
+    protected $fillable = ['school_name','address','email','image', 'desc'];
+
+    public function  Scholarship(){
+       return $this->hasMany("\App\Scholarship");
+    }
 }

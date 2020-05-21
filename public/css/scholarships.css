@@ -1,0 +1,32 @@
+.tm_dtl{
+    margin-right: 30px;
+    float: left;
+}
+.ad_auth_sec .tm_dtl i {
+    font-size: 18px;
+    margin-right: 6px;
+    margin-top: 2px;
+}
+.art_solk a.bk_mrk span:first-child {
+    border: 1px solid #006699;
+    width: 35px;
+    height: 35px;
+    float: left;
+    border-radius: 50px;
+    color: #006699;
+}
+.fa-bookmark-o:before {
+    float: left;
+    margin: 9px 11.5px 0;
+}
+.sv_ltr{
+    margin-left: 12px;
+}
+.comment-form-area {
+    background-color: #eef3f6;
+    text-align: center;border: 1px solid #eee;
+    padding: 47px 30px 43px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+
+}

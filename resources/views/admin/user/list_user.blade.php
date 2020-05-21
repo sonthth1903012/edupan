@@ -28,7 +28,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center">Danh sách User</h5>
-                            <a href="{{url("admin/user/create_user")}}" class="btn btn-default my-1">Thêm user</a>
+                            <a href="{{url("admin/user/create")}}" class="btn btn-default my-1">Thêm user</a>
                             <div class="table-responsive">
                                 <table id="zero_config" class="table table-striped table-bordered">
                                     <thead>
@@ -39,7 +39,7 @@
                                         <th>Role</th>
                                         <th>Phone</th>
                                         <th>Address</th>
-                                        <th>Controller</th>
+                                        <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>

@@ -50,6 +50,7 @@ class WebController extends Controller
         return view("blog",['news' => $news, 'category' => $category, 'link' => $link]);
     }
 
+
     public function blog_detail($id){
         $post = Post::find($id);
         $category = Category::orderBy('created_at','desc')->take(4)->get();
@@ -117,23 +118,13 @@ class WebController extends Controller
         return redirect()->to("/thanks");
     }
 
-
     public function thanks(){
         return view ("thanks");
     }
-//
 
-    public function scholarships(){
-        return view ("scholarships");
-    }
-    public function scholarships_detail(){
-        return view ("scholarships_detail");
-    }
     public function workshop(){
         return view ("workshop");
     }
-    public function form_scholarships(){
-        return view("form_scholarships");
-    }
+
 
 }

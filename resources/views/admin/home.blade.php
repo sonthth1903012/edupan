@@ -67,6 +67,27 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-danger text-center">
+                                <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
+                                <a href="{{url("/admin/school")}}"><h6 class="text-white">School</h6></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-danger text-center">
+                                <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
+                                <a href="{{url("/admin/scholarship")}}"><h6 class="text-white">Scholarship</h6></a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <!-- ============================================================== -->
             </div>

@@ -11,145 +11,131 @@
     </div>
     <!-- ##### Breadcumb Area End ##### -->
 
-    <section class="about-us-area mt-50 section-padding-100">
+    <!-- ##### Top Popular Courses Area Start ##### -->
+    <div class="top-popular-courses-area mt-50 section-padding-100-70">
         <div class="container">
             <div class="row">
-                <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
-                    <p class="lead "></p>
-                    <p class="lead ">
-                        Edupad Young World strives to identify the most impactful young leaders from every country in the
-                        world. Many One Young World delegates are top performing professionals, sent to attend the
-                        Summit by forward thinking managers who see the need for talent development. Scholarships provide
-                        the opportunity for exceptional young people to attend on the merit of their proven leadership
-                        and ability to  create change in their home country.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <div class="academy-courses-area ">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-4">
-                    <div class="single-course-area d-flex align-items-center mb-100">
-                        <a href="#"><img src="img/scholarships/FAQ.png" alt="">
-                        <p style="font-size: 26.25px; text-align: center; color: #00C0F3;">FAQ</p></a>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <div class="single-course-area d-flex align-items-center mb-100">
-                        <a href="#"><img src="img/scholarships/why_own.png" alt="">
-                            <p style="font-size: 26.25px; text-align: center;color: #00C0F3; ">Why OYW?</p></a>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <div class="single-course-area d-flex align-items-center mb-100">
-                        <a href="#"><img src="img/scholarships/application.png" alt="">
-                            <p style="font-size: 26.25px; text-align: center; color: #00C0F3;">Application Tips</p></a>
+                <div class="col-12">
+                    <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
+                        <h3>Scholarships</h3>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="row">
+                <!-- Single Top Popular Course -->
 
-    <div class="content">
-        <div class="quote-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
-            url({{asset("img/scholarships/48946901063_a9377d6129_o.jpg")}});
-            height: 60vh;background-position: center;background-size: cover; margin-bottom: 100px;justify-content: center;margin: 2em 0; ">
-
-            <div class="col-xs-10 col-sm-8 blockquote">
-                <div class="lead" style="color: #fff;">
-                    <div class="field field--name-field-quote-block-quote field--type-text-long field--label-hidden field--item">
-                        Since I won a scholarship to the One Young World Summit, my life has changed. Not only did this
-                        opportunity motivate me to continue working on building peace in my country, I also grew as a leader
-                        and now have friends all around the world.
-                    </div>
-                    <h4>
-                        <div class="field field--name-field-quote-block-quote field--type-text-long field--label-hidden field--item" style="color: #00C0F3;">
-                            2019 Delegate, Supported by the European Commission
+                @foreach($allScholarships as $scholarship)
+                <div class="col-12 col-lg-6">
+                    <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
+                         data-wow-delay="400ms">
+                        <div class="popular-course-content">
+                            <h5>{{$scholarship->name}}</h5>
+                            <span>{{$scholarship->School->school_name}}  | {{ $scholarship->duedate }} </span>
+                            <div class="course-ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                            <p>{{str_limit($scholarship->content),125}}</p>
+                            <a href="{{url("/scholarship/detail/{$scholarship->id}")}}" class="btn academy-btn btn-sm">See More</a>
                         </div>
-                    </h4>
+                        <div class="popular-course-thumb bg-img"
+                             style="background-image: url({{asset($scholarship->thumbnail)}}"></div>
+                    </div>
                 </div>
+                    @endforeach
+
             </div>
         </div>
+    </div>
+    <!-- ##### Top Popular Courses Area End ##### -->
 
-    <div class="panel-display oyw clearfix">
+    <!-- ##### Top Popular Courses Details Area Start ##### -->
+    <div class="popular-course-details-area wow fadeInUp" data-wow-delay="300ms">
+        <div class="single-top-popular-course d-flex align-items-center flex-wrap">
+            <div class="popular-course-content">
+                <h5>Business for begginers</h5>
+                <span>By Simon Smith   |  March 18, 2018</span>
+                <div class="course-ratings">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.
+                    Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna
+                    consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris. Etiam tristique
+                    magna eget velit consectetur, a tincidunt velit dictum. Cras vulputate metus id felis ornare
+                    hendrerit. Maecenas sodales suscipit ipsum.</p>
+                <a href="#" class="btn academy-btn btn-sm mt-15">See More</a>
+            </div>
+            <div class="popular-course-thumb bg-img"
+                 style="background-image: url({{asset("img/bg-img/bg-4.jpg")}}"></div>
+        </div>
+    </div>
+    <!-- ##### Top Popular Courses Details Area End ##### -->
+
+    <!-- ##### Course Area Start ##### -->
+    <div class="academy-courses-area section-padding-100-0">
         <div class="container">
             <div class="row">
-                <div class="oyw-layouts  oyw-layouts-first col-sm-4" >
-                    <table cellpadding=" 1" cellspacing="1" style="width: 100%;">
-                        <tbody>
-                        <tr>
-                            <td><h2 style="font-size: 4em; color: #69bc5f;">440+</h2></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: 15px;">scholarship recipients in 2019</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <!-- Single Course Area -->
+                <div class="col-12 col-lg-4">
+                    <div class="single-course-area d-flex align-items-center mb-100">
+                        <div class="course-icon">
+                            <i class="icon-id-card"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4>Business School</h4>
+                            <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="oyw-layouts  col-sm-4" >
-                    <table cellpadding=" 1" cellspacing="1" style="width: 100%;">
-                        <tbody>
-                        <tr>
-                            <td><h2 style="font-size: 4em; color: #69bc5f;">45,000+</h2></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: 15px;">applications in 2019</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <!-- Single Course Area -->
+                <div class="col-12 col-lg-4">
+                    <div class="single-course-area d-flex align-items-center mb-100">
+                        <div class="course-icon">
+                            <i class="icon-worldwide"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4>Marketing</h4>
+                            <p>Lacinia, lacinia la cus non, fermen tum nisi.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="oyw-layouts col-sm-4" >
-                    <table cellpadding=" 1" cellspacing="1" style="width: 100%;">
-                        <tbody>
-                        <tr>
-                            <td><h2 style="font-size: 4em; color: #69bc5f;">190+</h2></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: 15px;">countries represented in 2019</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <!-- Single Course Area -->
+                <div class="col-12 col-lg-4">
+                    <div class="single-course-area d-flex align-items-center mb-100">
+                        <div class="course-icon">
+                            <i class="icon-map"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4>Photography</h4>
+                            <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- ##### Course Area End ##### -->
 
-
-        <div class="panel-display oyw clearfix">
-            <div class="container">
-                <div class="row">
-                    <div class="oyw-layouts-header col-xs-12">
-                        <h2 style="color: #69bc5f;font-size: 3.5rem; ">Available Scholarships</h2>
+    <!-- ##### CTA Area Start ##### -->
+    <div class="call-to-action-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
+                        <h3>Do you want to learn at our Academy? Join us now!</h3>
+                        <a href="{{url('/contact')}}" class="btn academy-btn">Join now!</a>
                     </div>
-                </div>
-                <div class="row">
-
-                    <div class="oyw-layouts col-sm-4">
-                        <a href="{{url("/scholarships_detail")}}">
-                            <img src="{{asset("img/scholarships/2.2.-web-fb-960.jpg")}}" alt="">
-                            <h5 style=" padding-top: 15px; ">Deloitte- One Young World Scholarship 2020</h5>
-                        </a>
-                    </div>
-                    <div class="oyw-layouts col-sm-4">
-                        <a href="{{url("/scholarships_detail")}}">
-                            <img src="{{asset("img/scholarships/du-học.jpg")}}" alt="">
-                            <p style="font-size: 16px; padding-top: 15px;">Deloitte- One Young World Scholarship 2020</p>
-                        </a>
-                    </div>
-                    <div class="oyw-layouts col-sm-4">
-                        <a href="{{url("/scholarships_detail")}}">
-                            <img src="{{asset("img/scholarships/CHD_Korea_University2.jpg")}}" alt="">
-                            <p style="font-size: 16px; padding-top: 15px;">Deloitte- One Young World Scholarship 2020</p>
-                        </a>
-                    </div>
-                </div>
                 </div>
             </div>
-
+        </div>
     </div>
-    @endsection
+    <!-- ##### CTA Area End ##### -->
+
+@endsection

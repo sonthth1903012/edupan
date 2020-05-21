@@ -37,6 +37,7 @@
                                         <th>Title</th>
                                         <th>Content</th>
                                         <th>Category</th>
+{{--                                        <th>School</th>--}}
                                         <th>User</th>
                                         <th>Author</th>
                                         <th>shortDesc</th>
@@ -52,6 +53,7 @@
                                             <td>{{$p->title}}</td>
                                             <td>{{$p->content}}</td>
                                             <td>{{$p->Category->category_name}}</td>
+{{--                                            <td>{{$p->School->school_name}}</td>--}}
                                             <td>{{$p->User->name}}</td>
                                             <td>{{$p->author}}</td>
                                             <td>{{$p->shortDesc}}</td>

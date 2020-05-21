@@ -3,189 +3,235 @@
 namespace App\Http\Controllers;
 
 use App\Comment;
+use App\School;
 use Illuminate\Http\Request;
 use App\Post;
 use App\User;
 use App\Category;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
-    public function home(){
+    public function home()
+    {
         return view("admin.home");
     }
-    public function user(){
+
+    public function user()
+    {
         $users = User::all();
-        return view('admin.user.list_user',['users'=>$users]);
+        return view('admin.user.list_user', ['users' => $users]);
     }
 
-    public function category(){
+    public function category()
+    {
         $categories = Category::all();
-        return view('admin.category.list_category',['categories'=>$categories]);
+        return view('admin.category.list_category', ['categories' => $categories]);
     }
 
-    public function post(){
+    public function post()
+    {
         $users = User::all();
         $categories = Category::all();
         $posts = Post::all();
-        return view('admin.post.list_post',['categories'=>$categories,'users'=>$users,'posts'=>$posts]);
+        return view('admin.post.list_post', ['categories' => $categories, 'users' => $users, 'posts' => $posts]);
     }
 
-    public function comment(){
+    public function comment()
+    {
         $comments = Comment::all();
-        return view('admin.comment.list_comment',['comments'=>$comments]);
+        return view('admin.comment.list_comment', ['comments' => $comments]);
     }
 
-    public function userCreate(){
+    public function renderNewUser()
+    {
         return view("admin.user.create_user");
     }
 
-    public function categoryCreate(){
+    public function createUser(Request $request)
+    {
+        $request->validate([
+            "name" => "required|string|unique:users",
+            "email" => "required|string|unique:users",
+            "password" => "required|string|unique:users",
+        ]);
+        try {
+//            $user = new User;
+//            $user->name = $request->get("name");
+//            $user->email = $request->get("email");
+//              $user->save();
+            $user = User::create([
+                "name" => $request->get("name"),
+                "email" => $request->get("email"),
+                "password" => $request->get("password"),
+            ]);
+        } catch (\Exception $e) {
+            throw $e;
+//            return redirect()->back();
+        }
+        return dd($user);
+//        return redirect()->to("admin/user");
+    }
+
+    public function categoryCreate()
+    {
         return view("admin.category.create_category");
     }
 
-    public function postCreate(){
+    public function postCreate()
+    {
         $users = User::all();
         $categories = Category::all();
-        return view("admin.post.create_post",['categories'=>$categories,'users'=>$users]);
+        return view("admin.post.create_post", ['categories' => $categories, 'users' => $users]);
     }
 
-    public function commentCreate(){
+    public function commentCreate()
+    {
         $users = User::all();
         $posts = Post::all();
         return view("admin.comment.create_comment");
     }
 
-    public function categoryStore(Request $request){
+    public function categoryStore(Request $request)
+    {
         $request->validate([
-            "category_name"=> "required|string|unique:category"
+            "category_name" => "required|string|unique:category"
         ]);
         try {
             Category::create([
-                "category_name"=> $request->get("category_name")
+                "category_name" => $request->get("category_name")
             ]);
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             return redirect()->back();
         }
         return redirect()->to("admin/category");
     }
 
-    public function postStore(Request $request){
+    public function postStore(Request $request)
+    {
         $request->validate([
-            "post_title"=> "required|string",
-            "post_content"=> "required|string",
+            "post_title" => "required|string",
+            "post_content" => "required|string",
         ]);
         try {
             Post::create([
-                "title"=> $request->get("post_title"),
-                "category_id"=> $request->get("post_category"),
-                "user_id"=> $request->get("post_user"),
-                "content"=> $_POST['post_content'],
-                "shortDesc"=> $request->get("post_desc"),
-                "author"=> $request->get("post_author"),
-                "thumbnail"=> $request->get("post_thumbnail")
+                "title" => $request->get("post_title"),
+                "category_id" => $request->get("post_category"),
+                "user_id" => $request->get("post_user"),
+                "content" => $_POST['post_content'],
+                "shortDesc" => $request->get("post_desc"),
+                "author" => $request->get("post_author"),
+                "thumbnail" => $request->get("post_thumbnail")
             ]);
-        }catch (\Exception $e){
-            dd($e);
+        } catch (\Exception $e) {
+//            dd($e);
 //            return redirect()->back();
         }
         return redirect()->to("admin/post");
     }
 
-    public function categoryEdit($id){
+    public function categoryEdit($id)
+    {
         $category = Category::find($id);
-        return view("admin.category.edit_category",['category'=>$category]);
+        return view("admin.category.edit_category", ['category' => $category]);
     }
 
-    public function postEdit($id){
+    public function postEdit($id)
+    {
         $users = User::all();
         $categories = Category::all();
         $post = Post::find($id);
-        return view("admin.post.edit_post",['categories'=>$categories,'users'=>$users,'post'=>$post]);
+        return view("admin.post.edit_post", ['categories' => $categories, 'users' => $users, 'post' => $post]);
     }
 
-    public function commentEdit($id){
+    public function commentEdit($id)
+    {
         $comment = Post::find($id);
-        return view("admin.comment.edit_comment",['comment'=>$comment]);
+        return view("admin.comment.edit_comment", ['comment' => $comment]);
     }
 
-    public function categoryUpdate($id,Request $request){
+    public function categoryUpdate($id, Request $request)
+    {
         $category = Category::find($id);
         $request->validate([
-            "category_name"=> "required|string|unique:category,category_name,".$id
+            "category_name" => "required|string|unique:category,category_name," . $id
         ]);
         try {
             $category->update([
-                "category_name"=> $request->get('category_name')
+                "category_name" => $request->get('category_name')
             ]);
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             return redirect()->back();
         }
         return redirect()->to("admin/category");
     }
 
-    public function postUpdate($id,Request $request){
+    public function postUpdate($id, Request $request)
+    {
         $post = Post::find($id);
         $request->validate([
-            "post_title"=> "required|string",
-            "post_content"=> "required|string",
+            "post_title" => "required|string",
+            "post_content" => "required|string",
         ]);
         try {
             $post->update([
-                "title"=> $request->get("post_title"),
-                "category_id"=> $request->get("post_category"),
-                "user_id"=> $request->get("post_user"),
-                "content"=> $_POST['post_content'],
-                "shortDesc"=> $request->get("post_desc"),
-                "author"=> $request->get("post_author"),
-                "thumbnail"=> $request->get("post_thumbnail")
+                "title" => $request->get("post_title"),
+                "category_id" => $request->get("post_category"),
+                "user_id" => $request->get("post_user"),
+                "content" => $_POST['post_content'],
+                "shortDesc" => $request->get("post_desc"),
+                "author" => $request->get("post_author"),
+                "thumbnail" => $request->get("post_thumbnail")
             ]);
-        }catch (\Exception $e){
-            dd($e);
+        } catch (\Exception $e) {
+//            dd($e);
 //            return redirect()->back();
         }
         return redirect()->to("admin/post");
     }
 
-    public function categoryDelete($id){
+    public function categoryDelete($id)
+    {
         $category = Category::find($id);
         try {
             $category->delete();
-        }
-        catch (\Exception $e){
+        } catch (\Exception $e) {
             return redirect()->back();
         }
 
         return redirect()->to("admin/category");
     }
 
-    public function postDelete($id){
+    public function postDelete($id)
+    {
         $post = Post::find($id);
-        $comment = Comment::all()->where('post_id',$post->id);
+        $comment = Comment::all()->where('post_id', $post->id);
         try {
-            $comment ->each(function ($c) {
+            $comment->each(function ($c) {
                 $c->delete();
             });
             $post->delete();
-        }
-        catch (\Exception $e){
-            dd($e);
+        } catch (\Exception $e) {
+//            dd($e);
             return redirect()->back();
         }
 
         return redirect()->to("admin/post");
     }
 
-    public function commentDelete($id){
+    public function commentDelete($id)
+    {
         $comment = Comment::find($id);
         try {
             $comment->delete();
-        }
-        catch (\Exception $e){
+        } catch (\Exception $e) {
             dd($e);
             return redirect()->back();
         }
 
         return redirect()->to("admin/comment");
     }
+
 
 }
