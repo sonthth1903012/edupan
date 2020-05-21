@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <form class="form-horizontal" action="{{url("admin/post/update_post",['id'=>$post->id])}}" method="post">
+                        <form class="form-horizontal" action="{{url("admin/workshop/update_workshop",['id'=>$post->id])}}" method="post">
                             @csrf
                             <div class="row">
                                 <div class="card-body col-8">
@@ -38,7 +38,7 @@
                                             <script type="text/javascript">
                                                 tinymce.init({
                                                     selector: '#post_content',
-                                                    height: 400,
+                                                    height: 600,
                                                     theme: 'modern',
                                                     plugins: [
                                                         'advlist autolink lists link image charmap print preview hr anchor pagebreak',
@@ -105,15 +105,43 @@
                                             </script>
                                         </div>
                                     </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-3">Location</label>
+                                        <div class="col-9">
+                                            <input type="text" name="workshop_location" placeholder="Enter Location" id="workshop_location" value="{{$workshop->location}}" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-3">Time</label>
+                                        <div class="col-9">
+                                            <input type="datetime-local" name="workshop_time" placeholder="Enter Time" id="workshop_time" value="{{$date}}" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-3">Capacity</label>
+                                        <div class="col-9">
+                                            <input type="number" name="workshop_capacity" placeholder="Enter Capacity" id="workshop_capacity" value="{{$workshop->capacity}}" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-3">Fee</label>
+                                        <div class="col-9">
+                                            <input type="number" step="0.01" name="workshop_fee" placeholder="Enter Fee" id="workshop_fee" value="{{$workshop->fee}}" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="border-top">
+                                        <div class="card-body">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+
+                                        </div>
+                                    </div>
                                 </div>
 
-
-                            </div>
-                            <div class="border-top">
-                                <div class="card-body">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-
-                                </div>
                             </div>
                         </form>
                     </div>

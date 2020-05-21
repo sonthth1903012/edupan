@@ -26,9 +26,9 @@ class DatabaseSeeder extends Seeder
             'category_name' => 'WORKSHOP'
         ]);
 
-//        $this->call(UserSeeder::class);
-//        $this->call(CategorySeeder::class);
-//        $this->call(PostSeeder::class);
-//        $this->call(CommentSeeder::class);
+        $this->call(UserSeeder::class);
+        $this->call(CategorySeeder::class);
+        $this->call(PostSeeder::class);
+        $this->call(CommentSeeder::class);
     }
 }

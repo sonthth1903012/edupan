@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\User;
 use App\Category;
+use Illuminate\Support\Carbon;
 
 class AdminController extends Controller
 {
@@ -176,18 +177,29 @@ class AdminController extends Controller
 //            return redirect()->back();
         }
         try {
-            dd($request->get("workshop_time"));
-//            Workshop::create([
-//                "location" => $request->get("workshop_location"),
-//                "time" => $request->get("workshop_time"),
-//                "capacity" => $request->get("workshop_capacity"),
-//                "fee" => $request->get("workshop_fee"),
-//                "post_id" => $post -> id,
-//            ]);
+            $time = Carbon::parse($request->get("workshop_time"))->format('Y-m-d H:i:s');
+            Workshop::create([
+                "location" => $request->get("workshop_location"),
+                "time" => $time,
+                "capacity" => $request->get("workshop_capacity"),
+                "fee" => $request->get("workshop_fee"),
+                "post_id" => $post -> id,
+            ]);
         }catch (\Exception $e){
             dd($e);
         }
         return redirect()->to("admin/workshop");
+    }
+
+    public function workshopEdit($id){
+        $users = User::all();
+        $categories = Category::all();
+        $workshop = Workshop::find($id);
+        $post = $workshop -> Post;
+        $dt = \DateTime::createFromFormat('Y-m-d H:i:s', $workshop->time);
+        $date = $dt->format('Y-m-d\TH:i');
+        return view("admin.workshop.edit_workshop",['categories'=>$categories,'users'=>$users,
+            'workshop'=>$workshop,'post'=>$post,'date'=>$date]);
     }
 
     //Comment Collection
@@ -206,11 +218,6 @@ class AdminController extends Controller
         $comment = Post::find($id);
         return view("admin.comment.edit_comment",['comment'=>$comment]);
     }
-
-
-
-
-
 
 
 

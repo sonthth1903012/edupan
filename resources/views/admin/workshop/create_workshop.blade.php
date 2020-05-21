@@ -118,7 +118,7 @@
                                     <div class="form-group row">
                                         <label class="col-3">Time</label>
                                         <div class="col-9">
-                                            <input type="datetime-local" id="workshop_time" value="{{old("workshop_time")}}" class="form-control">
+                                            <input type="datetime-local" name="workshop_time" placeholder="Enter Time" id="workshop_time" value="{{old("workshop_time")}}" class="form-control">
                                         </div>
                                     </div>
 

@@ -65,11 +65,11 @@
                                             </td>
                                             <td>
                                                 <p>{{$w->attendees}}/{{$w->capacity}}</p>
-                                                <p>{{$w->fee}}</p>
+                                                <p>{{$w->fee}}.000</p>
                                             </td>
                                             <td>
-                                                <a href="{{url("admin/post/edit_workshop",['id'=>$w->id])}}">Edit</a>
-                                                <a href="{{url("admin/post/delete_workshop",['id'=>$w->id])}}">Delete</a>
+                                                <a href="{{url("admin/workshop/edit_workshop",['id'=>$w->id])}}">Edit</a>
+                                                <a href="{{url("admin/workshop/delete_workshop",['id'=>$w->id])}}">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
