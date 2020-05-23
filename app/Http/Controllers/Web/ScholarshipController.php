@@ -44,7 +44,7 @@ class ScholarshipController extends Controller
             "email" => "required|string",
             "address" => "required|string",
             "date_of_birth" => "required|date",
-            "phone" => "required|integer",
+            "phone" => "required",
             "skill"=>"required|file"
         ]);
 
@@ -70,7 +70,7 @@ class ScholarshipController extends Controller
         } catch (\Exception $e) {
             throw $e;
         }
-        return redirect()->back();
+        return redirect("scholarship/congratulations");
     }
 
     private function convertSpecialCharacters(string $str)

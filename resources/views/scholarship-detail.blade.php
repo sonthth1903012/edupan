@@ -1,7 +1,5 @@
 @extends('layout')
-
 @section('title',"Scholarships_detail")
-
 @section('content')
 
     <div class="region region-content" style=" min-height: 150px;">
@@ -46,7 +44,6 @@
         </div>
 
     </div>
-
 
 
     <!--================Scholarships detail =================-->
@@ -106,9 +103,14 @@
                         <h1 class="page-header" style="color: #69bc5f; text-align: center;margin-top: 60px;">
                             <span>APPLICATION DEADLINE: 22 MAY</span>
                         </h1>
-                        <p class="editor-button-blue" style="margin-top: 70px;">
-                            <a href="{{url("/scholarship/detail/{$scholarship->id}/register")}}"><span style="font-size: 20px; ">Apply here</span></a>
-                        </p>
+                        <div class="row">
+                            <div class="offset-4 col-3">
+                                <a class="btn academy-btn text-center mb-2" href="{{url("/scholarship/detail/{$scholarship->id}/register")}}">
+                                    <span  style="font-size: 20px;">Apply here</span>
+                                </a>
+                            </div>
+
+                        </div>
                         <p class="container" style="font-style: italic; font-size: 16px; font-weight: 100;padding-bottom: 100px;">
 
                             Deloitte refers to one or more of Deloitte Touche Tohmatsu Limited (“DTTL”), its global network of member
@@ -118,70 +120,72 @@
                         </p>
                     </div>
                     <!--================Comment Area=================-->
-                    <div class="comments-area " style="background-color: #fafaff;    border: 1px solid #eee;
-                    padding: 50px 30px; margin-top: 50px; ">
-                        <h4>Comment( 05)</h4>
-                        <div class="comment-list" style="padding-bottom: 48px;">
-                            <div class="single-comment justify-content-between d-flex">
-                                <div class="user justify-content-between d-flex">
-                                    <div class="thumb" style="margin-right: 20px;">
-                                        <img src="img/blog-img/lb-1.jpg" alt="">
-                                    </div>
-                                    <div class="desc" style="margin-bottom: 13px; color: #cccccc">
-                                        <h5 style="font-size: 16px;"><a href="#">Anner </a></h5>
-                                        <p class="date" style="font-size: 13px;">3456789hacjgaifh</p>
-                                        <p class="comment">Never say goodbye till the and comes!</p>
-                                    </div>
-                                </div>
-                                    <div class="reply-btn">
-                                        <a href="#" class="btn-reply text-uppercase">Reply</a>
-                                    </div>
-                            </div>
-                        </div>
 
-                            <div class="comment-list-child left-padding" style="padding-left: 25px;">
-                                <div class="single-comment justify-content-between d-flex">
-                                    <div class="user justify-content-between d-flex">
-                                        <div class="thumb" style="margin-right: 20px;">
-                                            <img src="img/blog-img/lb-1.jpg" alt="">
-                                        </div>
-                                        <div class="desc" style="margin-bottom: 13px; color: #cccccc">
-                                            <h5 style="font-size: 16px;"><a href="#">Anner </a></h5>
-                                            <p class="date" style="font-size: 13px;">3456789hacjgaifh</p>
-                                            <p class="comment">Never say goodbye till the and comes!</p>
-                                        </div>
-                                    </div>
-                                    <div class="reply-btn">
-                                        <a href="#" class="btn-reply text-uppercase">Reply</a>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="comment-form-area wow fadeInUp" style="margin-top: 48px;">
-                        <div class="comment-form">
-                            <h4 style="padding-bottom: 30px;">Leave a Reply</h4>
-                            <form action="#" method="post">
-                                @csrf
-                                <div class="form-group form-inline">
-                                    <div class="form-group col-lg-6 col-md-6 name">
-                                        <input type="text" class="form-control" id=" name" placeholder="Enter Name" required>
-                                    </div>
-                                    <div class="form-group col-lg-6 col-md-6 email">
-                                        <input type="email" class="form-control" id="email" placeholder="Enter email address" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="message"  class="form-control mb-10" id="" cols="30" rows="5" required></textarea>
-                                </div>
-                                <a href="#" class="primary-btn submit_btn">Submit</a>
-                            </form>
-                        </div>
-                    </div>
+{{--                    <div class="comments-area " style="background-color: #fafaff;    border: 1px solid #eee;--}}
+{{--                    padding: 50px 30px; margin-top: 50px; ">--}}
+{{--                        <h4>Comment( 05)</h4>--}}
+{{--                        <div class="comment-list" style="padding-bottom: 48px;">--}}
+{{--                            <div class="single-comment justify-content-between d-flex">--}}
+{{--                                <div class="user justify-content-between d-flex">--}}
+{{--                                    <div class="thumb" style="margin-right: 20px;">--}}
+{{--                                        <img src="img/blog-img/lb-1.jpg" alt="">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="desc" style="margin-bottom: 13px; color: #cccccc">--}}
+{{--                                        <h5 style="font-size: 16px;"><a href="#">Anner </a></h5>--}}
+{{--                                        <p class="date" style="font-size: 13px;">3456789hacjgaifh</p>--}}
+{{--                                        <p class="comment">Never say goodbye till the and comes!</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                    <div class="reply-btn">--}}
+{{--                                        <a href="#" class="btn-reply text-uppercase">Reply</a>--}}
+{{--                                    </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+
+{{--                            <div class="comment-list-child left-padding" style="padding-left: 25px;">--}}
+{{--                                <div class="single-comment justify-content-between d-flex">--}}
+{{--                                    <div class="user justify-content-between d-flex">--}}
+{{--                                        <div class="thumb" style="margin-right: 20px;">--}}
+{{--                                            <img src="img/blog-img/lb-1.jpg" alt="">--}}
+{{--                                        </div>--}}
+{{--                                        <div class="desc" style="margin-bottom: 13px; color: #cccccc">--}}
+{{--                                            <h5 style="font-size: 16px;"><a href="#">Anner </a></h5>--}}
+{{--                                            <p class="date" style="font-size: 13px;">3456789hacjgaifh</p>--}}
+{{--                                            <p class="comment">Never say goodbye till the and comes!</p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="reply-btn">--}}
+{{--                                        <a href="#" class="btn-reply text-uppercase">Reply</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="comment-form-area wow fadeInUp" style="margin-top: 48px;">--}}
+{{--                        <div class="comment-form">--}}
+{{--                            <h4 style="padding-bottom: 30px;">Leave a Reply</h4>--}}
+{{--                            <form action="#" method="post">--}}
+{{--                                @csrf--}}
+{{--                                <div class="form-group form-inline">--}}
+{{--                                    <div class="form-group col-lg-6 col-md-6 name">--}}
+{{--                                        <input type="text" class="form-control" id=" name" placeholder="Enter Name" required>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-group col-lg-6 col-md-6 email">--}}
+{{--                                        <input type="email" class="form-control" id="email" placeholder="Enter email address" required>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="form-group">--}}
+{{--                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>--}}
+{{--                                </div>--}}
+{{--                                <div class="form-group">--}}
+{{--                                    <textarea name="message"  class="form-control mb-10" id="" cols="30" rows="5" required></textarea>--}}
+{{--                                </div>--}}
+{{--                                <a href="#" class="primary-btn submit_btn">Submit</a>--}}
+{{--                            </form>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
                     <!--================Comment Area =================-->
+
                 </div>
 
 
@@ -289,6 +293,10 @@
 
                     </div>
                 </div>
+
+
+
+
             </div>
         </div>
     </section>

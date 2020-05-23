@@ -80,7 +80,7 @@
                                 <div class="form-group row">
                                     <label for="cc-name" class="col-sm-3 text-right control-label col-form-label">Due_Date</label>
                                     <div class="col-sm-9">
-                                        <input name="content" type="text" placeholder="Content" id="cc-name" value="{{$scholarship->duedate}}"
+                                        <input name="duedate" type="text" placeholder="Content" id="cc-name" value="{{$scholarship->duedate}}"
                                                class="form-control @if($errors->has("duedate"))is-invalid @else is-valid @endif" >
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@
                                 <div class="form-group row">
                                     <label for="cc-name" class="col-sm-3 text-right control-label col-form-label">Content</label>
                                     <div class="col-sm-9">
-                                       <textarea name="duedate" type="" id="desc" cols="30" rows="10" placeholder="Desc" value="{{$scholarship->content}}"
+                                       <textarea name="content" type="" id="Content" cols="30" rows="10" placeholder="Content" value="{{$scholarship->content}}"
                                                  class="form-control @if($errors->has("content"))is-invalid @else is-valid @endif"
                                                  required> </textarea>
                                     </div>

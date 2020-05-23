@@ -19,6 +19,10 @@ class User extends Authenticatable
         'name', 'email', 'password','phone','address'
     ];
 
+    public function Projects(){
+        return $this->belongsToMany("\App\Project",'project_user','project_id','user_id')->withPivot("amount","method");
+    }
+
     const ADMIN = 2;
     const SCHOOL = 1;
     const USER = 0;
