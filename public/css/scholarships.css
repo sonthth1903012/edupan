@@ -24,9 +24,63 @@
 }
 .comment-form-area {
     background-color: #eef3f6;
-    text-align: center;border: 1px solid #eee;
+    /*text-align: center;*/
+    display: flex;
+    border: 1px solid #eee;
     padding: 47px 30px 43px;
     margin-top: 50px;
     margin-bottom: 40px;
-
 }
+.text_7n{
+    font-weight: 700;
+    color: #b2bb1e;
+}
+
+.triangle-parent {
+    position: relative;
+}
+.box_horizontalPadded4 {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.box_verticalPadded2 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.col_white {
+    background: #fff;
+}
+.thermometer {
+    background-color: #e7e5e1;
+    height: 8px;
+    position: relative;
+    width: 100%;
+}
+
+.thermometer-percentRaised {
+    background-color: #b2bb1e;
+    height: 8px;
+    position: absolute;
+}
+
+.triangle.triangle_bottom, .triangle.triangle_top {
+    left: 50%;
+    margin-left: -14px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    border-width: 14px;
+    border-color: #fff;
+    background-color: transparent!important;
+    z-index: 100;
+}
+

@@ -22,7 +22,6 @@
                 </div>
             </div>
             <div class="row">
-
                 <!-- Single Top Popular Course -->
                 <div class="col-12 col-lg-6">
                     <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="400ms">
@@ -37,7 +36,7 @@
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
                             <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-                            <a href="#" class="btn academy-btn btn-sm">See More</a>
+                            <a href="{{url("/post_detail")}}" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-1.jpg);"></div>
                     </div>
@@ -57,7 +56,7 @@
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
                             <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-                            <a href="#" class="btn academy-btn btn-sm">See More</a>
+                            <a href="{{url("/post_detail")}}" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-2.jpg);"></div>
                     </div>
@@ -77,7 +76,7 @@
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
                             <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-                            <a href="#" class="btn academy-btn btn-sm">See More</a>
+                            <a href="{{url("/post_detail")}}" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-3.jpg);"></div>
                     </div>
@@ -97,7 +96,7 @@
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
                             <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-                            <a href="#" class="btn academy-btn btn-sm">See More</a>
+                            <a href="{{url("/post_detail")}}" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-4.jpg);"></div>
                     </div>
@@ -117,7 +116,7 @@
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
                             <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-                            <a href="#" class="btn academy-btn btn-sm">See More</a>
+                            <a href="{{url("/post_detail")}}" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-5.jpg);"></div>
                     </div>
@@ -137,7 +136,7 @@
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
                             <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.</p>
-                            <a href="#" class="btn academy-btn btn-sm">See More</a>
+                            <a href="{{url("/post_detail")}}" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/pc-6.jpg);"></div>
                     </div>
@@ -161,7 +160,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris. Etiam tristique magna eget velit consectetur, a tincidunt velit dictum. Cras vulputate metus id felis ornare hendrerit. Maecenas sodales suscipit ipsum.</p>
-                <a href="#" class="btn academy-btn btn-sm mt-15">See More</a>
+                <a href="{{url("/post_detail")}}" class="btn academy-btn btn-sm mt-15">See More</a>
             </div>
             <div class="popular-course-thumb bg-img" style="background-image: url(img/bg-img/bg-4.jpg);"></div>
         </div>

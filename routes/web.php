@@ -19,8 +19,7 @@ Route::get('/', function () {
 Route::get("/", "WebController@home");
 Route::get("/about_us", "WebController@about_us");
 Route::get("/contact", "WebController@contact");
-Route::get("/donate", "WebController@donate");
-Route::get("/donate_form", "WebController@donate_form");
+
 Route::get("/thanks", 'WebController@thanks');
 //
 Route::get("/post", "WebController@post");
@@ -38,6 +37,14 @@ Route::post("/sendscholarship", 'WebController@sendscholarship')->middleware("au
 Route::post("/search", "WebController@search");
 //
 
+Route::get("/project/all", "Web\ProjectController@archiveProject");
+Route::get("/project/detail/{id}", "Web\ProjectController@singleProject");
+Route::get("/project/detail/{id}/register", "Web\ProjectController@projectForm")->middleware("auth");
+Route::post("/project/detail/{id}/register", "Web\ProjectController@storeProject")->middleware("auth");
+Route::get("/project/detail/{id}/register/success", "Web\ProjectController@registerSuccess")->middleware("auth");
+Route::get("/organization/detail/{id}", "Web\OrganizationController@detailOrganization");
+
+//
 Route::get("/scholarship/all", "Web\ScholarshipController@archiveScholarship");
 Route::get("/scholarship/detail/{id}", "Web\ScholarshipController@singleScholarship");
 Route::get("/scholarship/detail/{id}/register", "Web\ScholarshipController@registerScholarship");

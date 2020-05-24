@@ -61,3 +61,22 @@ Route::get('scho_student/student/remove/{id}',"Admin\ScholarshipController@remov
 
 //download file
 Route::get("download/{filename}", "Admin\DownloadController@download");
+
+//organization
+Route::get('organization', "Admin\OrganizationController@organization");
+Route::get('organization/create_organization', "Admin\OrganizationController@organizationCreate");
+Route::post('organization/store_organization', "Admin\OrganizationController@organizationStore");
+
+Route::get('organization/edit_organization/{id}', "Admin\OrganizationController@organizationEdit");
+Route::post('organization/update_organization/{id}', "Admin\OrganizationController@organizationUpdate");
+Route::get('organization/delete_organization/{id}', "Admin\OrganizationController@organizationDelete");
+
+//project
+Route::get('project', "Admin\ProjectController@project");
+Route::get('project/create_project', "Admin\ProjectController@projectCreate");
+Route::post('project/store_project', "Admin\ProjectController@projectStore");
+
+Route::get('project/edit_project/{id}', "Admin\ProjectController@projectEdit");
+Route::post('project/update_project/{id}', "Admin\ProjectController@projectUpdate");
+Route::get('project/delete_project/{id}', "Admin\ProjectController@projectDelete");
+Route::get("project/edit_project/{id}/list_donate", "Admin\ProjectController@listDonate");

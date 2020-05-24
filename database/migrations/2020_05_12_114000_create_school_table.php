@@ -17,7 +17,7 @@ class CreateSchoolTable extends Migration
             $table->bigIncrements('id');
             $table->string('school_name');
             $table->string("email",191)->unique();
-            $table->string('address',191)->unique();
+            $table->string('address');
             $table->string('image',191)->unique();
             $table->text('desc');
             $table->timestamps();

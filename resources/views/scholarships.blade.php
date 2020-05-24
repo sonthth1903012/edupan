@@ -42,7 +42,7 @@
                             <a href="{{url("/scholarship/detail/{$scholarship->id}")}}" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img"
-                             style="background-image: url({{asset($scholarship->thumbnail)}}"></div>
+                             style="background-image: url('../{{$scholarship->thumbnail}}')"></div>
                     </div>
                 </div>
                     @endforeach

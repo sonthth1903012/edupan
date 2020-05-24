@@ -15,6 +15,7 @@
 
             <form class="contact100-form validate-form" method="post" action="{{url("/scholarship/detail/{$scholarship->id}/register")}}" enctype="multipart/form-data">
                 @csrf
+{{--                <pre>{{var_dump($errors)}}</pre>--}}
                 <span style="font-size: 18px; color: #333333;font-family: Raleway-Black;">
                     * Indicates required field
                 </span>
@@ -51,7 +52,7 @@
                     <input class="input100" type="text" name="address" placeholder="Address">
                 </div>
                 <div class="wrap-input100">
-                    <span class="label-input100">* Skill</span>
+                    <span class="label-input100">* Introduce Yourself</span>
                     <input class="input100" type="file" name="skill" placeholder="Skill">
                 </div>
 
@@ -71,9 +72,9 @@
                 <div class="container-contact100-form-btn">
                     <div class="wrap-contact100-form-btn">
                         <div class="contact100-form-bgbtn"></div>
-                        <a href="{{url("scholarship/congratulations")}}" type="submit" class="contact100-form-btn">
+                        <button type="submit" class="contact100-form-btn">
                             Submit
-                        </a>
+                        </button>
                     </div>
                 </div>
             </form>

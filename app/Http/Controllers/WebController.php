@@ -87,12 +87,6 @@ class WebController extends Controller
         return view ("post_detail");
     }
 
-    public function donate(){
-        return view ("donate");
-    }
-   public function donate_form(){
-        return view ("donate_form");
-    }
 
     function sendemail(Request $request)
     {

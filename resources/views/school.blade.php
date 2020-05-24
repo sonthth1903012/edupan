@@ -4,6 +4,12 @@
 
 @section('content')
 
+    <div class="breadcumb-area bg-img" style="background-image: url({{asset("img/bg-img/breadcumb.jpg")}});">
+        <div class="bradcumbContent">
+            <h2>School</h2>
+        </div>
+    </div>
+
     <div class="region region-content" style=" min-height: 150px;">
         <div class="container">
             <h1 class="page-header" style="color:#464646; text-align: center;margin-top: 100px;">
@@ -13,7 +19,7 @@
                 style="color: #707070; font-size: 20px;font-family: Open Sans,sans-serif,arial; ">{{$school->school_name}}</span>
 
             <div class="ad_img_cont cons " style="border-bottom: 1px solid #E4E4E4;border-top: 1px solid #E4E4E4;">
-                <div class="ad_rht_cont" style="padding: 18px 0 10px; " >
+                <div class="ad_rht_cont" style="padding: 18px 0 10px; ">
                     <div class="ad_auth_sec" style=" display: flex;">
                         <div class="tm_dtl ad_mbtm">
                             <a href="#" rel="author" style="color: #006699;">{{$school->address}}</a>
@@ -54,18 +60,18 @@
                     <div class="single-post row">
                         <div class="col-lg-12" style="padding-bottom:30px">
                             <div class="feature-img">
-                                <img class="img-fluid" src="{{asset($school->image)}}}" alt="">
+                                <img class="img-fluid" src="{{asset($school->image)}}" alt="">
                             </div>
                         </div>
 
                         <div class="col-lg-9 col-md-9 blog_details">
-                            <h2>{{$school->school_name}}</h2>
+                            <h2 style="padding-bottom: 30px;">{{$school->school_name}}</h2>
                             <p class="excert" style="font-weight: 500">
                                 Ideal scholarships for candidates who have more than 5 years of work experience and
                                 aspirations to bring positive impacts on the development of the community.
                             </p>
-                            <a href="{{url("/scholarships")}}"><p style="color: #61ba6d;">
-                                    >> 6 programs for short-term scholarships for international students
+                            <a href="{{url("/scholarship/all")}}"><p style="color: #61ba6d;">
+                                    >> 4 programs for short-term scholarships for international students
                                 </p></a>
 
                             <h6 style="font-weight: 500">Tổng quan </h6>
@@ -74,72 +80,61 @@
 
 
                         <!--================Comment Area=================-->
-                        <div class="comments-area " style="background-color: #fafaff;    border: 1px solid #eee;
-                    padding: 50px 30px; margin-top: 50px; ">
-                            <h4>Comment( 05)</h4>
-                            <div class="comment-list" style="padding-bottom: 48px;">
-                                <div class="single-comment justify-content-between d-flex">
-                                    <div class="user justify-content-between d-flex">
-                                        <div class="thumb" style="margin-right: 20px;">
-                                            <img src="img/blog-img/lb-1.jpg" alt="">
-                                        </div>
-                                        <div class="desc" style="margin-bottom: 13px; color: #cccccc">
-                                            <h5 style="font-size: 16px;"><a href="#">Anner </a></h5>
-                                            <p class="date" style="font-size: 13px;">3456789hacjgaifh</p>
-                                            <p class="comment">Never say goodbye till the and comes!</p>
-                                        </div>
-                                    </div>
-                                    <div class="reply-btn">
-                                        <a href="#" class="btn-reply text-uppercase">Reply</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="comment-list-child left-padding" style="padding-left: 25px;">
-                                <div class="single-comment justify-content-between d-flex">
-                                    <div class="user justify-content-between d-flex">
-                                        <div class="thumb" style="margin-right: 20px;">
-                                            <img src="img/blog-img/lb-1.jpg" alt="">
-                                        </div>
-                                        <div class="desc" style="margin-bottom: 13px; color: #cccccc">
-                                            <h5 style="font-size: 16px;"><a href="#">Anner </a></h5>
-                                            <p class="date" style="font-size: 13px;">3456789hacjgaifh</p>
-                                            <p class="comment">Never say goodbye till the and comes!</p>
-                                        </div>
-                                    </div>
-                                    <div class="reply-btn">
-                                        <a href="#" class="btn-reply text-uppercase">Reply</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comment-form-area wow fadeInUp" style="margin-top: 48px;">
-                            <div class="comment-form">
-                                <h4 style="padding-bottom: 30px;">Leave a Reply</h4>
-                                <form action="#" method="post">
-                                    @csrf
-                                    <div class="form-group form-inline">
-                                        <div class="form-group col-lg-6 col-md-6 name">
-                                            <input type="text" class="form-control" id=" name" placeholder="Enter Name"
-                                                   required>
-                                        </div>
-                                        <div class="form-group col-lg-6 col-md-6 email">
-                                            <input type="email" class="form-control" id="email"
-                                                   placeholder="Enter email address" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-                                    </div>
-                                    <div class="form-group">
-                                <textarea name="message" class="form-control mb-10" id="" cols="30" rows="5"
-                                          required></textarea>
-                                    </div>
-                                    <a href="#" class="primary-btn submit_btn">Submit</a>
-                                </form>
-                            </div>
+                        <div class="comments-area " style=" border: 1px solid #eee;
+                    padding: 5px 5px; margin-top: 50px; ">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0951822985844!2d105.77955771424534!3d21.02887719315175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b3260b1a8b%3A0x862052392e3f478e!2zOCBUw7RuIFRo4bqldCBUaHV54bq_dCwgTeG7uSDEkMOsbmgsIFThu6sgTGnDqm0sIEjDoCBO4buZaSAxMDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1586629471851!5m2!1svi!2s"
+                                width="400" height="210" frameborder="0" style="border:0;" allowfullscreen=""
+                                aria-hidden="false" tabindex="0"></iframe>
                         </div>
 
+                    </div>
+                    <div class="comment-form-area wow fadeInUp" style="margin-top: 48px;">
+                        <div class="comment-form">
+                            <h4 style="padding-bottom: 30px;">Maybe you are interested</h4>
+                            <div class="row">
+                                @foreach($relatedSchools as $school)
+                                    <div class="col-lg-4">
+                                        <div class="img-responsive">
+                                            <img src="{{asset($school->image)}}" alt="" srcset="">
+                                        </div>
+                                        <div class="info">
+                                            <a href="{{url("school/detail/{$school->id}")}}">
+                                                <h6>{{$school->school_name}}</h6>
+                                            </a>
+                                            <p>
+                                                {{\Str::limit($school->desc, 50, "...")}}
+                                            </p>
+                                        </div>
+                                        <a class="btn academy-btn" href="{{url("school/detail/{$school->id}")}}">See more</a>
+                                        {{--                                        <pre>{{var_dump($school)}}</pre>--}}
+                                    </div>
+                                @endforeach
+                            </div>
+
+
+                            {{--                            <form action="#" method="post">--}}
+                            {{--                                @csrf--}}
+                            {{--                                <div class="form-group form-inline">--}}
+                            {{--                                    <div class="form-group col-lg-6 col-md-6 name">--}}
+                            {{--                                        <input type="text" class="form-control" id=" name" placeholder="Enter Name"--}}
+                            {{--                                               required>--}}
+                            {{--                                    </div>--}}
+                            {{--                                    <div class="form-group col-lg-6 col-md-6 email">--}}
+                            {{--                                        <input type="email" class="form-control" id="email"--}}
+                            {{--                                               placeholder="Enter email address" required>--}}
+                            {{--                                    </div>--}}
+                            {{--                                </div>--}}
+                            {{--                                <div class="form-group">--}}
+                            {{--                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>--}}
+                            {{--                                </div>--}}
+                            {{--                                <div class="form-group">--}}
+                            {{--                                <textarea name="message" class="form-control mb-10" id="" cols="30" rows="5"--}}
+                            {{--                                          required></textarea>--}}
+                            {{--                                </div>--}}
+                            {{--                                <a href="#" class="primary-btn submit_btn">Submit</a>--}}
+                            {{--                            </form>--}}
+                        </div>
                     </div>
 
                 </div>
@@ -254,7 +249,10 @@
                 </div>
 
             </div>
+
+
         </div>
+
 
     </section>
     <!--================Blog Area =================-->

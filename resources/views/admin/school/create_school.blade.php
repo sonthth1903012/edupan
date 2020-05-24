@@ -55,7 +55,7 @@
                                 <div class="form-group row">
                                     <label for="cc-name" class="col-sm-3 text-right control-label col-form-label">Address</label>
                                     <div class="col-sm-9">
-                                        <input name="address" type="text" placeholder="Category Name Here" id="cc-name"
+                                        <input name="address" type="text" placeholder="Address Here" id="cc-name"
                                                value="{{old("address")}}"
                                                class="form-control @if($errors->has("address"))is-invalid @else is-valid @endif">
                                     </div>
