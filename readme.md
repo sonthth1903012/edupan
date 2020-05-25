@@ -4,6 +4,7 @@ Thành viên:
 -Trần Hùng Sơn
 
 Link heroku: http://edupan-project.herokuapp.com/
+Link admin: http://edupan-project.herokuapp.com/admin/home
  
 Tài khoản admin: admin@comany.com   
 Mật khẩu: 12345678
